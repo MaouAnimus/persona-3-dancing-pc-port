@@ -836,7 +836,24 @@ std::tuple<ImageId, int, int> TextureCache::ResolveOverlap(const ImageInfo& imag
         if (image_info.size == cache_image.info.size &&
             image_info.pixel_format == cache_image.info.pixel_format &&
             image_info.tile_mode == cache_image.info.tile_mode) {
-            cache_image.info.guest_size = std::max(cache_image.info.guest_size, image_info.guest_size);
+            if (image_info.guest_size > cache_image.info.guest_size) {
+                const u64 old_page_end = (cache_image.info.guest_address + cache_image.info.guest_size - 1) >> Traits::PageBits;
+                const u64 new_page_end = (cache_image.info.guest_address + image_info.guest_size - 1) >> Traits::PageBits;
+
+                total_used_memory += Common::AlignUp(image_info.guest_size, 1024) -
+                                     Common::AlignUp(cache_image.info.guest_size, 1024);
+                cache_image.info.guest_size = image_info.guest_size;
+                cache_image.guest_end = cache_image.info.guest_address + image_info.guest_size;
+
+                for (u64 page = old_page_end + 1; page <= new_page_end; ++page) {
+                    auto& ids = page_table[page];
+                    if (std::ranges::find(ids, cache_image_id) == ids.end()) {
+                        ids.push_back(cache_image_id);
+                    }
+                }
+                ++registry_generation;
+                TrackImage(cache_image_id);
+            }
             auto result_id = merged_image_id ? merged_image_id : cache_image_id;
             return {result_id, -1, -1};
         }
@@ -1506,13 +1523,13 @@ void TextureCache::UnregisterImage(ImageId image_id) {
     ForEachPage(image.info.guest_address, image.info.guest_size, [this, image_id](u64 page) {
         const auto page_it = page_table.find(page);
         if (page_it == nullptr) {
-            UNREACHABLE_MSG("Unregistering unregistered page=0x{:x}", page << PageShift);
+            LOG_WARNING(Render_Vulkan, "Unregistering unregistered page=0x{:x}", page << Traits::PageBits);
             return;
         }
         auto& image_ids = *page_it;
         const auto vector_it = std::ranges::find(image_ids, image_id);
         if (vector_it == image_ids.end()) {
-            ASSERT_MSG(false, "Unregistering unregistered image in page=0x{:x}", page << PageShift);
+            LOG_WARNING(Render_Vulkan, "Unregistering unregistered image in page=0x{:x}", page << Traits::PageBits);
             return;
         }
         image_ids.erase(vector_it);
