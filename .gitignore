@@ -1,0 +1,65 @@
+# =============================================================================
+# Persona 3: Dancing in Moonlight PC Port - Git Ignore
+# Excluye assets con copyright, volcados PS4, herramientas externas y artefactos
+# =============================================================================
+
+# --- 1. Dumps y Assets del Juego Oficial (Copyright Atlus / SEGA) ---
+CUSA12636/
+extracted_assets/
+*.cpk
+*.pkg
+*.awb
+*.acb
+*.prx
+*.sprx
+*.elf
+eboot.bin
+
+# --- 2. Archivos Binarios del Loader y Salida de Recompilación ---
+out/
+engine/out/
+native/build/
+bin/*.exe
+bin/*.dll
+bin/*.pdb
+*.exe
+*.dll
+*.pdb
+*.obj
+*.o
+*.a
+*.lib
+*.zip
+*.tar.*
+
+# --- 3. Herramientas Externas Pesadas ---
+ghidra_*/
+tools/ghidra_projects/
+tools/PKG-Studio.exe
+tools/GFD-Studio/
+tools/GMDTool/
+
+# --- 4. Logs, Volcados de Framebuffer y Telemetría ---
+*.log
+*.raw
+*.request
+rendering_debug.log
+game_crash.log
+game_last_run.log
+game_stderr.log
+game_stdout.log
+native_run.log
+test_*.log
+test_pad.txt
+docs/evidence/**/*.raw
+docs/evidence/**/*.events.jsonl
+
+# --- 5. Datos de Usuario, Guardados y Caché del Shader/Python ---
+user/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# --- 6. Configuración de IDE y Entorno Local ---
+.vscode/*
+!.vscode/settings.json

@@ -1,0 +1,4 @@
+#include <winuser.h>
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "p3d.manifest"
+// Persona 3 Dancing icon
+1 ICON "../../launcher/p3d.ico"

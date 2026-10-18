@@ -1,0 +1,30 @@
+{
+  "command": [
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\bin\\p3d_engine.exe",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+    "--app0",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+    "--user",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\visual-no-msaa-20261018T003347Z\\user",
+    "--timeout",
+    "0"
+  ],
+  "executable_sha256": "3c2a042624f8d14fef1c58269533623e6c9d96552765350ca0208156c2a5041c",
+  "environment": {
+    "GOW3_PAD_FILE": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\visual-no-msaa-20261018T003347Z\\pad.txt",
+    "GOW3_GPU_LOG": "info",
+    "GOW3_UPSCALER": "none",
+    "GOW3_GPU_USER_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\user",
+    "GOW3_FRAME_DUMP_TRIGGER": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\visual-no-msaa-20261018T003347Z\\capture.request",
+    "GOW3_DUMP_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\visual-no-msaa-20261018T003347Z",
+    "GOW3_NO_MSAA": "1"
+  },
+  "started_utc": "2026-10-18T00:33:48.268206+00:00",
+  "output": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\visual-no-msaa-20261018T003347Z",
+  "pulses": 20,
+  "pid": 4036,
+  "observed_exit_code": null,
+  "deadline_reached": true,
+  "cleanup": "terminated only the owned regression process at the deadline",
+  "elapsed_seconds": 36.25
+}

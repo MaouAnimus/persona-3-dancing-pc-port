@@ -1,0 +1,13 @@
+{
+  "pid": 8284,
+  "command": [
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\p3d.exe",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+    "--app0",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636"
+  ],
+  "started_utc": "2026-10-17T09:48:07.299927+00:00",
+  "exit_code": 3,
+  "exit_hex": "0x3",
+  "elapsed_seconds": 26.01
+}

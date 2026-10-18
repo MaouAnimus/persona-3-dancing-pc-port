@@ -1,0 +1,3919 @@
+{
+  "schema": "p3d-owned-process-diagnostic-v1",
+  "started_utc": "2026-10-17T04:50:26.751284+00:00",
+  "command": [
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_runtime\\p3d-runtime.exe",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_runtime\\boot-linked.bin",
+    "--app0",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+    "--user",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\evidence\\codex-20261017\\user",
+    "--timeout",
+    "0"
+  ],
+  "cwd": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC",
+  "seconds": 1.0,
+  "check_imports": false,
+  "cpu_only": false,
+  "probe_sha256": "61d6b99c11432a91625cf1fb6d5549db9d81e58483d7c94a799bea450558ff41",
+  "boot_sha256": "6d4e7cb709919bc62606ace803461b339ef322f411775a7f4d174f590916498a",
+  "log": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\evidence\\codex-20261017\\p3d-startup-snapshot-20261017T045026750784Z.log",
+  "report": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\evidence\\codex-20261017\\p3d-startup-snapshot-20261017T045026750784Z.json",
+  "user": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\evidence\\codex-20261017\\user",
+  "dll_dirs": [
+    "C:\\msys64\\clang64\\bin"
+  ],
+  "boot": {
+    "format": "G3PROBE5",
+    "image_size": 13403436,
+    "entry": 2219072,
+    "capabilities": 1,
+    "imports": 622,
+    "relocations": 36449,
+    "segments": [
+      {
+        "offset": 0,
+        "size": 5822008,
+        "flags": 5
+      },
+      {
+        "offset": 5832704,
+        "size": 278528,
+        "flags": 4
+      },
+      {
+        "offset": 6111232,
+        "size": 4624544,
+        "flags": 6
+      },
+      {
+        "offset": 10747904,
+        "size": 875248,
+        "flags": 5
+      },
+      {
+        "offset": 11632640,
+        "size": 16384,
+        "flags": 4
+      },
+      {
+        "offset": 11649024,
+        "size": 105744,
+        "flags": 6
+      },
+      {
+        "offset": 11796480,
+        "size": 366744,
+        "flags": 5
+      },
+      {
+        "offset": 12173312,
+        "size": 16384,
+        "flags": 4
+      },
+      {
+        "offset": 12189696,
+        "size": 1213740,
+        "flags": 6
+      }
+    ],
+    "modules": [
+      {
+        "name": "libc.prx",
+        "base": 10747904,
+        "size": 1006864
+      },
+      {
+        "name": "libSceFios2.prx",
+        "base": 11796480,
+        "size": 1606956
+      }
+    ]
+  },
+  "limitations": [
+    "RBP frames are heuristic and can stop at non-frame-pointer code.",
+    "Stack candidates are raw pointers, not proven return addresses.",
+    "Host addresses identify module and offset, without debug symbols.",
+    "Only this invocation's child process is inspected and terminated."
+  ],
+  "pid": 1644,
+  "deadline_reached": true,
+  "snapshot": {
+    "captured_utc": "2026-10-17T04:50:28.194284+00:00",
+    "method": "individual thread suspension; snapshots are not simultaneous",
+    "guest_image": {
+      "base": "0x800000000",
+      "validated": true,
+      "method": "original entry bytes match boot image",
+      "entry_bytes_compared": 32
+    },
+    "host": {
+      "modules": [
+        {
+          "name": "p3d-runtime.exe",
+          "path": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_runtime\\p3d-runtime.exe",
+          "base": "0x7ff7d5ea0000",
+          "size": 182849536
+        },
+        {
+          "name": "ntdll.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+          "base": "0x7fff3f110000",
+          "size": 2064384
+        },
+        {
+          "name": "KERNEL32.DLL",
+          "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+          "base": "0x7fff3ed70000",
+          "size": 794624
+        },
+        {
+          "name": "KERNELBASE.dll",
+          "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+          "base": "0x7fff3cb20000",
+          "size": 3104768
+        },
+        {
+          "name": "bcrypt.dll",
+          "path": "C:\\WINDOWS\\System32\\bcrypt.dll",
+          "base": "0x7fff3caf0000",
+          "size": 159744
+        },
+        {
+          "name": "WS2_32.dll",
+          "path": "C:\\WINDOWS\\System32\\WS2_32.dll",
+          "base": "0x7fff3f030000",
+          "size": 438272
+        },
+        {
+          "name": "RPCRT4.dll",
+          "path": "C:\\WINDOWS\\System32\\RPCRT4.dll",
+          "base": "0x7fff3ef10000",
+          "size": 1179648
+        },
+        {
+          "name": "ucrtbase.dll",
+          "path": "C:\\WINDOWS\\System32\\ucrtbase.dll",
+          "base": "0x7fff3c9f0000",
+          "size": 1048576
+        },
+        {
+          "name": "USER32.dll",
+          "path": "C:\\WINDOWS\\System32\\USER32.dll",
+          "base": "0x7fff3e590000",
+          "size": 1708032
+        },
+        {
+          "name": "win32u.dll",
+          "path": "C:\\WINDOWS\\System32\\win32u.dll",
+          "base": "0x7fff3d0b0000",
+          "size": 139264
+        },
+        {
+          "name": "swscale-10.dll",
+          "path": "C:\\msys64\\clang64\\bin\\swscale-10.dll",
+          "base": "0x7ffef67a0000",
+          "size": 2146304
+        },
+        {
+          "name": "GDI32.dll",
+          "path": "C:\\WINDOWS\\System32\\GDI32.dll",
+          "base": "0x7fff3f0a0000",
+          "size": 176128
+        },
+        {
+          "name": "SDL3.dll",
+          "path": "C:\\msys64\\clang64\\bin\\SDL3.dll",
+          "base": "0x7ffef69b0000",
+          "size": 3125248
+        },
+        {
+          "name": "avcodec-63.dll",
+          "path": "C:\\msys64\\clang64\\bin\\avcodec-63.dll",
+          "base": "0x7ffed9740000",
+          "size": 25137152
+        },
+        {
+          "name": "gdi32full.dll",
+          "path": "C:\\WINDOWS\\System32\\gdi32full.dll",
+          "base": "0x7fff3c7a0000",
+          "size": 1150976
+        },
+        {
+          "name": "IMM32.dll",
+          "path": "C:\\WINDOWS\\System32\\IMM32.dll",
+          "base": "0x7fff3ee40000",
+          "size": 192512
+        },
+        {
+          "name": "ole32.dll",
+          "path": "C:\\WINDOWS\\System32\\ole32.dll",
+          "base": "0x7fff3df70000",
+          "size": 1224704
+        },
+        {
+          "name": "msvcp_win.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcp_win.dll",
+          "base": "0x7fff3ce20000",
+          "size": 643072
+        },
+        {
+          "name": "combase.dll",
+          "path": "C:\\WINDOWS\\System32\\combase.dll",
+          "base": "0x7fff3d1b0000",
+          "size": 3489792
+        },
+        {
+          "name": "SHELL32.dll",
+          "path": "C:\\WINDOWS\\System32\\SHELL32.dll",
+          "base": "0x7fff3d570000",
+          "size": 7798784
+        },
+        {
+          "name": "avutil-61.dll",
+          "path": "C:\\msys64\\clang64\\bin\\avutil-61.dll",
+          "base": "0x7ffef3c90000",
+          "size": 2224128
+        },
+        {
+          "name": "OLEAUT32.dll",
+          "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+          "base": "0x7fff3e0a0000",
+          "size": 839680
+        },
+        {
+          "name": "vulkan-1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\vulkan-1.dll",
+          "base": "0x7ffef65f0000",
+          "size": 1744896
+        },
+        {
+          "name": "ADVAPI32.dll",
+          "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+          "base": "0x7fff3dce0000",
+          "size": 724992
+        },
+        {
+          "name": "libc++.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libc++.dll",
+          "base": "0x7ffef3b40000",
+          "size": 1372160
+        },
+        {
+          "name": "libwinpthread-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libwinpthread-1.dll",
+          "base": "0x7fff1fa30000",
+          "size": 81920
+        },
+        {
+          "name": "msvcrt.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcrt.dll",
+          "base": "0x7fff3ee70000",
+          "size": 647168
+        },
+        {
+          "name": "sechost.dll",
+          "path": "C:\\WINDOWS\\System32\\sechost.dll",
+          "base": "0x7fff3e3d0000",
+          "size": 651264
+        },
+        {
+          "name": "libxxhash.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libxxhash.dll",
+          "base": "0x7fff1f9f0000",
+          "size": 114688
+        },
+        {
+          "name": "SETUPAPI.dll",
+          "path": "C:\\WINDOWS\\System32\\SETUPAPI.dll",
+          "base": "0x7fff3e740000",
+          "size": 4653056
+        },
+        {
+          "name": "CFGMGR32.dll",
+          "path": "C:\\WINDOWS\\System32\\CFGMGR32.dll",
+          "base": "0x7fff3d0e0000",
+          "size": 319488
+        },
+        {
+          "name": "zlib1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\zlib1.dll",
+          "base": "0x7fff1f9c0000",
+          "size": 147456
+        },
+        {
+          "name": "libiconv-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libiconv-2.dll",
+          "base": "0x7ffef7b00000",
+          "size": 1134592
+        },
+        {
+          "name": "WINMM.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+          "base": "0x7fff34bb0000",
+          "size": 159744
+        },
+        {
+          "name": "librav1e.dll",
+          "path": "C:\\msys64\\clang64\\bin\\librav1e.dll",
+          "base": "0x7ffee5470000",
+          "size": 3284992
+        },
+        {
+          "name": "swresample-7.dll",
+          "path": "C:\\msys64\\clang64\\bin\\swresample-7.dll",
+          "base": "0x7fff1b700000",
+          "size": 167936
+        },
+        {
+          "name": "libvpx-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libvpx-1.dll",
+          "base": "0x7ffedcaa0000",
+          "size": 3506176
+        },
+        {
+          "name": "libwebpmux-3.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libwebpmux-3.dll",
+          "base": "0x7fff1f9a0000",
+          "size": 94208
+        },
+        {
+          "name": "liblzma-5.dll",
+          "path": "C:\\msys64\\clang64\\bin\\liblzma-5.dll",
+          "base": "0x7fff1b6c0000",
+          "size": 208896
+        },
+        {
+          "name": "libdav1d-7.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libdav1d-7.dll",
+          "base": "0x7ffedc890000",
+          "size": 2158592
+        },
+        {
+          "name": "libopencore-amrwb-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libopencore-amrwb-0.dll",
+          "base": "0x7fff1b690000",
+          "size": 147456
+        },
+        {
+          "name": "librsvg-2-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\librsvg-2-2.dll",
+          "base": "0x7ffedbe70000",
+          "size": 5107712
+        },
+        {
+          "name": "libcairo-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libcairo-2.dll",
+          "base": "0x7ffee4660000",
+          "size": 1216512
+        },
+        {
+          "name": "bcryptprimitives.dll",
+          "path": "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+          "base": "0x7fff3cec0000",
+          "size": 532480
+        },
+        {
+          "name": "libgobject-2.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgobject-2.0-0.dll",
+          "base": "0x7fff1b5f0000",
+          "size": 352256
+        },
+        {
+          "name": "libglib-2.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libglib-2.0-0.dll",
+          "base": "0x7ffee1790000",
+          "size": 1495040
+        },
+        {
+          "name": "libzvbi-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libzvbi-0.dll",
+          "base": "0x7fff1b500000",
+          "size": 471040
+        },
+        {
+          "name": "libaom.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libaom.dll",
+          "base": "0x7ffedb550000",
+          "size": 9506816
+        },
+        {
+          "name": "libgsm.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgsm.dll",
+          "base": "0x7fff1b430000",
+          "size": 81920
+        },
+        {
+          "name": "libjxl.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libjxl.dll",
+          "base": "0x7ffed9160000",
+          "size": 6148096
+        },
+        {
+          "name": "libjxl_threads.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libjxl_threads.dll",
+          "base": "0x7fff23050000",
+          "size": 40960
+        },
+        {
+          "name": "liblc3-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\liblc3-1.dll",
+          "base": "0x7fff10c40000",
+          "size": 204800
+        },
+        {
+          "name": "libmp3lame-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libmp3lame-0.dll",
+          "base": "0x7ffef72b0000",
+          "size": 573440
+        },
+        {
+          "name": "libopencore-amrnb-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libopencore-amrnb-0.dll",
+          "base": "0x7fff10c00000",
+          "size": 221184
+        },
+        {
+          "name": "libopenjp2-7.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libopenjp2-7.dll",
+          "base": "0x7fff10b90000",
+          "size": 450560
+        },
+        {
+          "name": "libopus-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libopus-0.dll",
+          "base": "0x7ffef3ab0000",
+          "size": 565248
+        },
+        {
+          "name": "libspeex-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libspeex-1.dll",
+          "base": "0x7fff0bfe0000",
+          "size": 212992
+        },
+        {
+          "name": "libSvtAv1Enc-4.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libSvtAv1Enc-4.dll",
+          "base": "0x7ffed89e0000",
+          "size": 7835648
+        },
+        {
+          "name": "libtheoradec-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libtheoradec-2.dll",
+          "base": "0x7fff1b410000",
+          "size": 106496
+        },
+        {
+          "name": "libtheoraenc-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libtheoraenc-2.dll",
+          "base": "0x7ffefb6c0000",
+          "size": 237568
+        },
+        {
+          "name": "libvorbis-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libvorbis-0.dll",
+          "base": "0x7ffef74b0000",
+          "size": 245760
+        },
+        {
+          "name": "libvorbisenc-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libvorbisenc-2.dll",
+          "base": "0x7ffef26f0000",
+          "size": 581632
+        },
+        {
+          "name": "libwebp-7.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libwebp-7.dll",
+          "base": "0x7ffee53c0000",
+          "size": 667648
+        },
+        {
+          "name": "libx264-165.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libx264-165.dll",
+          "base": "0x7ffed86e0000",
+          "size": 3137536
+        },
+        {
+          "name": "libx265-217.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libx265-217.dll",
+          "base": "0x7ffed7360000",
+          "size": 20402176
+        },
+        {
+          "name": "xvidcore.dll",
+          "path": "C:\\msys64\\clang64\\bin\\xvidcore.dll",
+          "base": "0x7ffedc730000",
+          "size": 1421312
+        },
+        {
+          "name": "libva.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libva.dll",
+          "base": "0x7ffef6dc0000",
+          "size": 303104
+        },
+        {
+          "name": "libvpl-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libvpl-2.dll",
+          "base": "0x7ffef08b0000",
+          "size": 434176
+        },
+        {
+          "name": "libva_win32.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libva_win32.dll",
+          "base": "0x7fff22c10000",
+          "size": 36864
+        },
+        {
+          "name": "pdh.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\pdh.dll",
+          "base": "0x7fff1f920000",
+          "size": 331776
+        },
+        {
+          "name": "avformat-63.dll",
+          "path": "C:\\msys64\\clang64\\bin\\avformat-63.dll",
+          "base": "0x7ffed70b0000",
+          "size": 2756608
+        },
+        {
+          "name": "VERSION.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll",
+          "base": "0x7fff36b90000",
+          "size": 40960
+        },
+        {
+          "name": "libZydis.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libZydis.dll",
+          "base": "0x7ffee12b0000",
+          "size": 618496
+        },
+        {
+          "name": "libsoxr.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libsoxr.dll",
+          "base": "0x7ffee8d20000",
+          "size": 540672
+        },
+        {
+          "name": "libunwind.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libunwind.dll",
+          "base": "0x7fff1aaa0000",
+          "size": 69632
+        },
+        {
+          "name": "libgio-2.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgio-2.0-0.dll",
+          "base": "0x7ffed6ee0000",
+          "size": 1875968
+        },
+        {
+          "name": "libpng16-16.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libpng16-16.dll",
+          "base": "0x7ffef2620000",
+          "size": 258048
+        },
+        {
+          "name": "SHLWAPI.dll",
+          "path": "C:\\WINDOWS\\System32\\SHLWAPI.dll",
+          "base": "0x7fff3d510000",
+          "size": 372736
+        },
+        {
+          "name": "libfontconfig-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libfontconfig-1.dll",
+          "base": "0x7ffee5130000",
+          "size": 512000
+        },
+        {
+          "name": "MSIMG32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSIMG32.dll",
+          "base": "0x7fff22b90000",
+          "size": 28672
+        },
+        {
+          "name": "libfreetype-6.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libfreetype-6.dll",
+          "base": "0x7ffedc650000",
+          "size": 860160
+        },
+        {
+          "name": "libpixman-1-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libpixman-1-0.dll",
+          "base": "0x7ffed6e00000",
+          "size": 876544
+        },
+        {
+          "name": "libpango-1.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libpango-1.0-0.dll",
+          "base": "0x7ffee1240000",
+          "size": 417792
+        },
+        {
+          "name": "libgdk_pixbuf-2.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgdk_pixbuf-2.0-0.dll",
+          "base": "0x7ffef1f20000",
+          "size": 339968
+        },
+        {
+          "name": "libxml2-16.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libxml2-16.dll",
+          "base": "0x7ffed6cc0000",
+          "size": 1253376
+        },
+        {
+          "name": "libpangocairo-1.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libpangocairo-1.0-0.dll",
+          "base": "0x7fff188b0000",
+          "size": 86016
+        },
+        {
+          "name": "libffi-8.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libffi-8.dll",
+          "base": "0x7fff20b30000",
+          "size": 53248
+        },
+        {
+          "name": "libintl-8.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libintl-8.dll",
+          "base": "0x7ffeeb360000",
+          "size": 319488
+        },
+        {
+          "name": "libpcre2-8-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libpcre2-8-0.dll",
+          "base": "0x7ffedf1c0000",
+          "size": 786432
+        },
+        {
+          "name": "libjxl_cms.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libjxl_cms.dll",
+          "base": "0x7fff10a80000",
+          "size": 159744
+        },
+        {
+          "name": "libbrotlidec.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libbrotlidec.dll",
+          "base": "0x7fff0e2d0000",
+          "size": 77824
+        },
+        {
+          "name": "libbrotlienc.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libbrotlienc.dll",
+          "base": "0x7ffed6bf0000",
+          "size": 798720
+        },
+        {
+          "name": "libhwy.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libhwy.dll",
+          "base": "0x7fff13f20000",
+          "size": 94208
+        },
+        {
+          "name": "libogg-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libogg-0.dll",
+          "base": "0x7fff1d170000",
+          "size": 57344
+        },
+        {
+          "name": "libsharpyuv-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libsharpyuv-0.dll",
+          "base": "0x7fff1c760000",
+          "size": 65536
+        },
+        {
+          "name": "libbz2-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libbz2-1.dll",
+          "base": "0x7ffef7480000",
+          "size": 135168
+        },
+        {
+          "name": "libgme.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgme.dll",
+          "base": "0x7ffedd1f0000",
+          "size": 487424
+        },
+        {
+          "name": "libmodplug-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libmodplug-1.dll",
+          "base": "0x7ffed6b00000",
+          "size": 958464
+        },
+        {
+          "name": "libbluray-4.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libbluray-4.dll",
+          "base": "0x7ffedceb0000",
+          "size": 372736
+        },
+        {
+          "name": "libgnutls-30.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgnutls-30.dll",
+          "base": "0x7ffed68e0000",
+          "size": 2224128
+        },
+        {
+          "name": "CRYPT32.dll",
+          "path": "C:\\WINDOWS\\System32\\CRYPT32.dll",
+          "base": "0x7fff3cf50000",
+          "size": 1429504
+        },
+        {
+          "name": "libsrt.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libsrt.dll",
+          "base": "0x7ffed6820000",
+          "size": 753664
+        },
+        {
+          "name": "librtmp-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\librtmp-1.dll",
+          "base": "0x7fff0d6c0000",
+          "size": 131072
+        },
+        {
+          "name": "libssh.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libssh.dll",
+          "base": "0x7ffedb4c0000",
+          "size": 561152
+        },
+        {
+          "name": "libomp.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libomp.dll",
+          "base": "0x7ffed6740000",
+          "size": 876544
+        },
+        {
+          "name": "libgmodule-2.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgmodule-2.0-0.dll",
+          "base": "0x7fff1b840000",
+          "size": 45056
+        },
+        {
+          "name": "libexpat-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libexpat-1.dll",
+          "base": "0x7ffeec530000",
+          "size": 233472
+        },
+        {
+          "name": "libharfbuzz-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libharfbuzz-0.dll",
+          "base": "0x7ffed65f0000",
+          "size": 1331200
+        },
+        {
+          "name": "DNSAPI.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+          "base": "0x7fff3bb30000",
+          "size": 827392
+        },
+        {
+          "name": "IPHLPAPI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+          "base": "0x7fff3baf0000",
+          "size": 241664
+        },
+        {
+          "name": "libfribidi-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libfribidi-0.dll",
+          "base": "0x7ffef65c0000",
+          "size": 163840
+        },
+        {
+          "name": "libthai-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libthai-0.dll",
+          "base": "0x7fff0d010000",
+          "size": 86016
+        },
+        {
+          "name": "libjpeg-8.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libjpeg-8.dll",
+          "base": "0x7ffed6510000",
+          "size": 897024
+        },
+        {
+          "name": "gdiplus.dll",
+          "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.6456_none_91a399b0cc88bc24\\gdiplus.dll",
+          "base": "0x7fff1f700000",
+          "size": 1736704
+        },
+        {
+          "name": "libtiff-6.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libtiff-6.dll",
+          "base": "0x7ffed6470000",
+          "size": 610304
+        },
+        {
+          "name": "libpangoft2-1.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libpangoft2-1.0-0.dll",
+          "base": "0x7fff0cb30000",
+          "size": 114688
+        },
+        {
+          "name": "libpangowin32-1.0-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libpangowin32-1.0-0.dll",
+          "base": "0x7fff0a590000",
+          "size": 114688
+        },
+        {
+          "name": "libbrotlicommon.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libbrotlicommon.dll",
+          "base": "0x7ffeec490000",
+          "size": 163840
+        },
+        {
+          "name": "liblcms2-2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\liblcms2-2.dll",
+          "base": "0x7ffed63f0000",
+          "size": 479232
+        },
+        {
+          "name": "ncrypt.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\ncrypt.dll",
+          "base": "0x7fff3c160000",
+          "size": 159744
+        },
+        {
+          "name": "libzstd.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libzstd.dll",
+          "base": "0x7ffed5cf0000",
+          "size": 1019904
+        },
+        {
+          "name": "libp11-kit-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libp11-kit-0.dll",
+          "base": "0x7ffed5b70000",
+          "size": 1536000
+        },
+        {
+          "name": "libidn2-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libidn2-0.dll",
+          "base": "0x7ffeeac40000",
+          "size": 253952
+        },
+        {
+          "name": "libunistring-5.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libunistring-5.dll",
+          "base": "0x7ffed5910000",
+          "size": 2428928
+        },
+        {
+          "name": "libtasn1-6.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libtasn1-6.dll",
+          "base": "0x7ffefb610000",
+          "size": 122880
+        },
+        {
+          "name": "libhogweed-7.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libhogweed-7.dll",
+          "base": "0x7ffee73f0000",
+          "size": 278528
+        },
+        {
+          "name": "libgmp-10.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgmp-10.dll",
+          "base": "0x7ffed62e0000",
+          "size": 704512
+        },
+        {
+          "name": "libnettle-9.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libnettle-9.dll",
+          "base": "0x7ffed6390000",
+          "size": 356352
+        },
+        {
+          "name": "libcrypto-3-x64.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libcrypto-3-x64.dll",
+          "base": "0x7ffed5df0000",
+          "size": 5165056
+        },
+        {
+          "name": "WSOCK32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WSOCK32.dll",
+          "base": "0x7fff1afb0000",
+          "size": 36864
+        },
+        {
+          "name": "DWrite.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DWrite.dll",
+          "base": "0x7fff0bcb0000",
+          "size": 2617344
+        },
+        {
+          "name": "USP10.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\USP10.dll",
+          "base": "0x7fff1b650000",
+          "size": 102400
+        },
+        {
+          "name": "libgraphite2.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libgraphite2.dll",
+          "base": "0x7ffeeb7b0000",
+          "size": 151552
+        },
+        {
+          "name": "libdatrie-1.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libdatrie-1.dll",
+          "base": "0x7fff1b5e0000",
+          "size": 57344
+        },
+        {
+          "name": "libjbig-0.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libjbig-0.dll",
+          "base": "0x7ffef26d0000",
+          "size": 81920
+        },
+        {
+          "name": "libLerc.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libLerc.dll",
+          "base": "0x7ffed5870000",
+          "size": 655360
+        },
+        {
+          "name": "libdeflate.dll",
+          "path": "C:\\msys64\\clang64\\bin\\libdeflate.dll",
+          "base": "0x7ffef2230000",
+          "size": 122880
+        },
+        {
+          "name": "CRYPTBASE.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+          "base": "0x7fff3bf80000",
+          "size": 49152
+        },
+        {
+          "name": "NSI.dll",
+          "path": "C:\\WINDOWS\\System32\\NSI.dll",
+          "base": "0x7fff3e580000",
+          "size": 32768
+        },
+        {
+          "name": "NTASN1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\NTASN1.dll",
+          "base": "0x7fff3c120000",
+          "size": 241664
+        },
+        {
+          "name": "kernel.appcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+          "base": "0x7fff3a5f0000",
+          "size": 73728
+        },
+        {
+          "name": "IconCodecService.dll",
+          "path": "C:\\WINDOWS\\system32\\IconCodecService.dll",
+          "base": "0x7ffef2100000",
+          "size": 36864
+        },
+        {
+          "name": "WindowsCodecs.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WindowsCodecs.dll",
+          "base": "0x7fff39ef0000",
+          "size": 1794048
+        },
+        {
+          "name": "SHCORE.DLL",
+          "path": "C:\\WINDOWS\\System32\\SHCORE.DLL",
+          "base": "0x7fff3dda0000",
+          "size": 708608
+        },
+        {
+          "name": "DWMAPI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DWMAPI.DLL",
+          "base": "0x7fff3a410000",
+          "size": 188416
+        },
+        {
+          "name": "DXGI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DXGI.DLL",
+          "base": "0x7fff3afe0000",
+          "size": 1007616
+        },
+        {
+          "name": "uxtheme.dll",
+          "path": "C:\\WINDOWS\\system32\\uxtheme.dll",
+          "base": "0x7fff3a100000",
+          "size": 647168
+        },
+        {
+          "name": "hid.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\hid.dll",
+          "base": "0x7fff3afa0000",
+          "size": 53248
+        },
+        {
+          "name": "DEVOBJ.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DEVOBJ.dll",
+          "base": "0x7fff3c450000",
+          "size": 208896
+        },
+        {
+          "name": "XInput1_4.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\XInput1_4.dll",
+          "base": "0x7fff0d600000",
+          "size": 69632
+        },
+        {
+          "name": "inputhost.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\inputhost.dll",
+          "base": "0x7fff12510000",
+          "size": 1384448
+        },
+        {
+          "name": "wintypes.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\wintypes.dll",
+          "base": "0x7fff393d0000",
+          "size": 1404928
+        },
+        {
+          "name": "CoreMessaging.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CoreMessaging.dll",
+          "base": "0x7fff39890000",
+          "size": 991232
+        },
+        {
+          "name": "PROPSYS.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\PROPSYS.dll",
+          "base": "0x7fff37820000",
+          "size": 999424
+        },
+        {
+          "name": "CoreUIComponents.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CoreUIComponents.dll",
+          "base": "0x7fff39530000",
+          "size": 3518464
+        },
+        {
+          "name": "ntmarta.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
+          "base": "0x7fff3b980000",
+          "size": 208896
+        },
+        {
+          "name": "clbcatq.dll",
+          "path": "C:\\WINDOWS\\System32\\clbcatq.dll",
+          "base": "0x7fff3e4d0000",
+          "size": 692224
+        },
+        {
+          "name": "dinput8.dll",
+          "path": "C:\\Windows\\System32\\dinput8.dll",
+          "base": "0x7ffeeb7e0000",
+          "size": 282624
+        },
+        {
+          "name": "WINTRUST.dll",
+          "path": "C:\\WINDOWS\\System32\\WINTRUST.dll",
+          "base": "0x7fff3c8c0000",
+          "size": 471040
+        },
+        {
+          "name": "MSASN1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSASN1.dll",
+          "base": "0x7fff3c280000",
+          "size": 73728
+        },
+        {
+          "name": "windows.staterepositorycore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\windows.staterepositorycore.dll",
+          "base": "0x7fff2b240000",
+          "size": 69632
+        },
+        {
+          "name": "nvoglv64.dll",
+          "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_da865124972e1f80\\nvoglv64.dll",
+          "base": "0x7ffe68c40000",
+          "size": 48934912
+        },
+        {
+          "name": "WTSAPI32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll",
+          "base": "0x7fff377e0000",
+          "size": 81920
+        },
+        {
+          "name": "cryptnet.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\cryptnet.dll",
+          "base": "0x7fff36b10000",
+          "size": 200704
+        },
+        {
+          "name": "wldp.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\wldp.dll",
+          "base": "0x7fff3c010000",
+          "size": 176128
+        },
+        {
+          "name": "drvstore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\drvstore.dll",
+          "base": "0x7fff36850000",
+          "size": 1339392
+        },
+        {
+          "name": "imagehlp.dll",
+          "path": "C:\\WINDOWS\\System32\\imagehlp.dll",
+          "base": "0x7fff3ec70000",
+          "size": 118784
+        },
+        {
+          "name": "CRYPTSP.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll",
+          "base": "0x7fff3c050000",
+          "size": 98304
+        },
+        {
+          "name": "rsaenh.dll",
+          "path": "C:\\WINDOWS\\system32\\rsaenh.dll",
+          "base": "0x7fff3b730000",
+          "size": 229376
+        },
+        {
+          "name": "nvgpucomp64.dll",
+          "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_da865124972e1f80\\nvgpucomp64.dll",
+          "base": "0x7fff23430000",
+          "size": 110788608
+        },
+        {
+          "name": "MSCTF.dll",
+          "path": "C:\\WINDOWS\\System32\\MSCTF.dll",
+          "base": "0x7fff3de50000",
+          "size": 1134592
+        },
+        {
+          "name": "mscms.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\mscms.dll",
+          "base": "0x7fff34c00000",
+          "size": 712704
+        },
+        {
+          "name": "USERENV.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+          "base": "0x7fff3c650000",
+          "size": 188416
+        },
+        {
+          "name": "ColorAdapterClient.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\ColorAdapterClient.dll",
+          "base": "0x7fff34be0000",
+          "size": 69632
+        },
+        {
+          "name": "textinputframework.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\textinputframework.dll",
+          "base": "0x7fff1cf00000",
+          "size": 1019904
+        },
+        {
+          "name": "dataexchange.dll",
+          "path": "C:\\WINDOWS\\system32\\dataexchange.dll",
+          "base": "0x7fff0a390000",
+          "size": 253952
+        },
+        {
+          "name": "dcomp.dll",
+          "path": "C:\\WINDOWS\\system32\\dcomp.dll",
+          "base": "0x7fff38b70000",
+          "size": 1982464
+        },
+        {
+          "name": "d3d11.dll",
+          "path": "C:\\WINDOWS\\system32\\d3d11.dll",
+          "base": "0x7fff381e0000",
+          "size": 2506752
+        },
+        {
+          "name": "twinapi.appcore.dll",
+          "path": "C:\\WINDOWS\\system32\\twinapi.appcore.dll",
+          "base": "0x7fff39c00000",
+          "size": 2109440
+        },
+        {
+          "name": "windows.storage.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll",
+          "base": "0x7fff3a7f0000",
+          "size": 8015872
+        },
+        {
+          "name": "dxcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll",
+          "base": "0x7fff31c90000",
+          "size": 241664
+        },
+        {
+          "name": "nvspcap64.dll",
+          "path": "C:\\WINDOWS\\system32\\nvspcap64.dll",
+          "base": "0x7ffee7bc0000",
+          "size": 1495040
+        },
+        {
+          "name": "profapi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll",
+          "base": "0x7fff3c6d0000",
+          "size": 147456
+        },
+        {
+          "name": "nvapi64.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\nvapi64.dll",
+          "base": "0x7fff33150000",
+          "size": 561152
+        },
+        {
+          "name": "nvapi64_impl.dll",
+          "path": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_da865124972e1f80\\nvapi64_impl.dll",
+          "base": "0x7fff324b0000",
+          "size": 5840896
+        },
+        {
+          "name": "d3d12.dll",
+          "path": "C:\\WINDOWS\\system32\\d3d12.dll",
+          "base": "0x7ffeb7c90000",
+          "size": 151552
+        },
+        {
+          "name": "D3D12Core.dll",
+          "path": "C:\\WINDOWS\\system32\\D3D12Core.dll",
+          "base": "0x7ffee1cf0000",
+          "size": 1888256
+        },
+        {
+          "name": "nvldumdx.dll",
+          "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_da865124972e1f80\\nvldumdx.dll",
+          "base": "0x7fff31bc0000",
+          "size": 843776
+        },
+        {
+          "name": "NvMemMapStoragex.dll",
+          "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_da865124972e1f80\\NvMemMapStoragex.dll",
+          "base": "0x7fff31540000",
+          "size": 1421312
+        },
+        {
+          "name": "POWRPROF.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\POWRPROF.dll",
+          "base": "0x7fff3c600000",
+          "size": 307200
+        },
+        {
+          "name": "UMPDC.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+          "base": "0x7fff3c5e0000",
+          "size": 73728
+        },
+        {
+          "name": "nvwgf2umx.dll",
+          "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_da865124972e1f80\\nvwgf2umx.dll",
+          "base": "0x7fff2bad0000",
+          "size": 90284032
+        },
+        {
+          "name": "nvppex.dll",
+          "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_da865124972e1f80\\nvppex.dll",
+          "base": "0x7fff0d9b0000",
+          "size": 7499776
+        },
+        {
+          "name": "D3DSCache.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\D3DSCache.dll",
+          "base": "0x7ffedc350000",
+          "size": 176128
+        },
+        {
+          "name": "opengl32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\opengl32.dll",
+          "base": "0x7ffecd200000",
+          "size": 1212416
+        },
+        {
+          "name": "GLU32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\GLU32.dll",
+          "base": "0x7ffee7630000",
+          "size": 180224
+        },
+        {
+          "name": "AppXDeploymentClient.dll",
+          "path": "C:\\Windows\\System32\\AppXDeploymentClient.dll",
+          "base": "0x7fff36e50000",
+          "size": 1073152
+        }
+      ]
+    },
+    "threads": [
+      {
+        "tid": 23828,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x134cfaf20",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x1000183c88",
+          "rbp": "0x82b3a0",
+          "rsi": "0x0",
+          "rdi": "0x1000183d08",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x1000183d90",
+          "r12": "0x8120",
+          "r13": "0x7ffef6c96ed8",
+          "r14": "0x1000183ce0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 8192,
+        "stack_guest_pointer_candidates": [
+          {
+            "stack_address": "0x1000184dc0",
+            "stack_offset": "0x1138",
+            "value": {
+              "address": "0x80036d950",
+              "kind": "guest",
+              "image_offset": "0x36d950",
+              "module": "eboot",
+              "module_offset": "0x36d950",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000184f18",
+            "stack_offset": "0x1290",
+            "value": {
+              "address": "0x80036d950",
+              "kind": "guest",
+              "image_offset": "0x36d950",
+              "module": "eboot",
+              "module_offset": "0x36d950",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000184f28",
+            "stack_offset": "0x12a0",
+            "value": {
+              "address": "0x800a882fa",
+              "kind": "guest",
+              "image_offset": "0xa882fa",
+              "module": "libc.prx",
+              "module_offset": "0x482fa",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000184f60",
+            "stack_offset": "0x12d8",
+            "value": {
+              "address": "0x80036d950",
+              "kind": "guest",
+              "image_offset": "0x36d950",
+              "module": "eboot",
+              "module_offset": "0x36d950",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185038",
+            "stack_offset": "0x13b0",
+            "value": {
+              "address": "0x80036eb93",
+              "kind": "guest",
+              "image_offset": "0x36eb93",
+              "module": "eboot",
+              "module_offset": "0x36eb93",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185058",
+            "stack_offset": "0x13d0",
+            "value": {
+              "address": "0x80036db4d",
+              "kind": "guest",
+              "image_offset": "0x36db4d",
+              "module": "eboot",
+              "module_offset": "0x36db4d",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x10001850f8",
+            "stack_offset": "0x1470",
+            "value": {
+              "address": "0x800369adb",
+              "kind": "guest",
+              "image_offset": "0x369adb",
+              "module": "eboot",
+              "module_offset": "0x369adb",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185100",
+            "stack_offset": "0x1478",
+            "value": {
+              "address": "0x8005ce2f0",
+              "kind": "guest",
+              "image_offset": "0x5ce2f0",
+              "module": "eboot",
+              "module_offset": "0x5ce2f0",
+              "executable": false
+            }
+          },
+          {
+            "stack_address": "0x1000185118",
+            "stack_offset": "0x1490",
+            "value": {
+              "address": "0x800369178",
+              "kind": "guest",
+              "image_offset": "0x369178",
+              "module": "eboot",
+              "module_offset": "0x369178",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185148",
+            "stack_offset": "0x14c0",
+            "value": {
+              "address": "0x80036772c",
+              "kind": "guest",
+              "image_offset": "0x36772c",
+              "module": "eboot",
+              "module_offset": "0x36772c",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185190",
+            "stack_offset": "0x1508",
+            "value": {
+              "address": "0x800000000",
+              "kind": "guest",
+              "image_offset": "0x0",
+              "module": "eboot",
+              "module_offset": "0x0",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x10001851c8",
+            "stack_offset": "0x1540",
+            "value": {
+              "address": "0x80094d528",
+              "kind": "guest",
+              "image_offset": "0x94d528",
+              "module": "eboot",
+              "module_offset": "0x94d528",
+              "executable": false
+            }
+          },
+          {
+            "stack_address": "0x10001851d8",
+            "stack_offset": "0x1550",
+            "value": {
+              "address": "0x800367baa",
+              "kind": "guest",
+              "image_offset": "0x367baa",
+              "module": "eboot",
+              "module_offset": "0x367baa",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x10001851e0",
+            "stack_offset": "0x1558",
+            "value": {
+              "address": "0x8005cdf90",
+              "kind": "guest",
+              "image_offset": "0x5cdf90",
+              "module": "eboot",
+              "module_offset": "0x5cdf90",
+              "executable": false
+            }
+          },
+          {
+            "stack_address": "0x1000185208",
+            "stack_offset": "0x1580",
+            "value": {
+              "address": "0x8003652f4",
+              "kind": "guest",
+              "image_offset": "0x3652f4",
+              "module": "eboot",
+              "module_offset": "0x3652f4",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185238",
+            "stack_offset": "0x15b0",
+            "value": {
+              "address": "0x80033b1c5",
+              "kind": "guest",
+              "image_offset": "0x33b1c5",
+              "module": "eboot",
+              "module_offset": "0x33b1c5",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185280",
+            "stack_offset": "0x15f8",
+            "value": {
+              "address": "0x8005cdf90",
+              "kind": "guest",
+              "image_offset": "0x5cdf90",
+              "module": "eboot",
+              "module_offset": "0x5cdf90",
+              "executable": false
+            }
+          },
+          {
+            "stack_address": "0x1000185298",
+            "stack_offset": "0x1610",
+            "value": {
+              "address": "0x80033af50",
+              "kind": "guest",
+              "image_offset": "0x33af50",
+              "module": "eboot",
+              "module_offset": "0x33af50",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x10001852d8",
+            "stack_offset": "0x1650",
+            "value": {
+              "address": "0x8003228ac",
+              "kind": "guest",
+              "image_offset": "0x3228ac",
+              "module": "eboot",
+              "module_offset": "0x3228ac",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185318",
+            "stack_offset": "0x1690",
+            "value": {
+              "address": "0x800322739",
+              "kind": "guest",
+              "image_offset": "0x322739",
+              "module": "eboot",
+              "module_offset": "0x322739",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185368",
+            "stack_offset": "0x16e0",
+            "value": {
+              "address": "0x800378d1a",
+              "kind": "guest",
+              "image_offset": "0x378d1a",
+              "module": "eboot",
+              "module_offset": "0x378d1a",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185418",
+            "stack_offset": "0x1790",
+            "value": {
+              "address": "0x80033ab13",
+              "kind": "guest",
+              "image_offset": "0x33ab13",
+              "module": "eboot",
+              "module_offset": "0x33ab13",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x10001855c8",
+            "stack_offset": "0x1940",
+            "value": {
+              "address": "0x800210652",
+              "kind": "guest",
+              "image_offset": "0x210652",
+              "module": "eboot",
+              "module_offset": "0x210652",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185678",
+            "stack_offset": "0x19f0",
+            "value": {
+              "address": "0x80000bb80",
+              "kind": "guest",
+              "image_offset": "0xbb80",
+              "module": "eboot",
+              "module_offset": "0xbb80",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x10001856c0",
+            "stack_offset": "0x1a38",
+            "value": {
+              "address": "0x800917300",
+              "kind": "guest",
+              "image_offset": "0x917300",
+              "module": "eboot",
+              "module_offset": "0x917300",
+              "executable": false
+            }
+          },
+          {
+            "stack_address": "0x10001856d8",
+            "stack_offset": "0x1a50",
+            "value": {
+              "address": "0x80020a41f",
+              "kind": "guest",
+              "image_offset": "0x20a41f",
+              "module": "eboot",
+              "module_offset": "0x20a41f",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x10001856f8",
+            "stack_offset": "0x1a70",
+            "value": {
+              "address": "0x8001dd4f9",
+              "kind": "guest",
+              "image_offset": "0x1dd4f9",
+              "module": "eboot",
+              "module_offset": "0x1dd4f9",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185708",
+            "stack_offset": "0x1a80",
+            "value": {
+              "address": "0x8001dd279",
+              "kind": "guest",
+              "image_offset": "0x1dd279",
+              "module": "eboot",
+              "module_offset": "0x1dd279",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185718",
+            "stack_offset": "0x1a90",
+            "value": {
+              "address": "0x80020e6b3",
+              "kind": "guest",
+              "image_offset": "0x20e6b3",
+              "module": "eboot",
+              "module_offset": "0x20e6b3",
+              "executable": true
+            }
+          },
+          {
+            "stack_address": "0x1000185728",
+            "stack_offset": "0x1aa0",
+            "value": {
+              "address": "0x800295a9f",
+              "kind": "guest",
+              "image_offset": "0x295a9f",
+              "module": "eboot",
+              "module_offset": "0x295a9f",
+              "executable": true
+            }
+          }
+        ],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26576,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d5",
+          "rcx": "0x78",
+          "rdx": "0x1ad9fe0",
+          "rbx": "0x1ada360",
+          "rsp": "0x2bcfb98",
+          "rbp": "0x0",
+          "rsi": "0x1ad9860",
+          "rdi": "0x1ada360",
+          "r8": "0x290",
+          "r9": "0x290",
+          "r10": "0x0",
+          "r11": "0x524",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1b1034"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b1034",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa1034"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d6010000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1128,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 21712,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d5",
+          "rcx": "0x78",
+          "rdx": "0x1adb970",
+          "rbx": "0x1adbcf0",
+          "rsp": "0x3bcf4a8",
+          "rbp": "0x0",
+          "rsi": "0x1ad9860",
+          "rdi": "0x1adbcf0",
+          "r8": "0xcf",
+          "r9": "0xcf",
+          "r10": "0x0",
+          "r11": "0x16f",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1b1034"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b1034",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa1034"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d6010000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2904,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 12856,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d5",
+          "rcx": "0x78",
+          "rdx": "0x1ade2a0",
+          "rbx": "0x1ade620",
+          "rsp": "0x4bcf628",
+          "rbp": "0x0",
+          "rsi": "0x1ad9860",
+          "rdi": "0x1ade620",
+          "r8": "0xf0",
+          "r9": "0x4bcf0d0",
+          "r10": "0x7ffee76300f0",
+          "r11": "0x1",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1b1034"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b1034",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa1034"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d6010000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2520,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 13024,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x121",
+          "rcx": "0x73deb48",
+          "rdx": "0x20019",
+          "rbx": "0x0",
+          "rsp": "0x73deaa8",
+          "rbp": "0x73debb0",
+          "rsi": "0x20019",
+          "rdi": "0x0",
+          "r8": "0x73df500",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0xff7ffffdfffe9fff",
+          "r12": "0x3",
+          "r13": "0x73deef0",
+          "r14": "0x0",
+          "r15": "0xb7b7f90",
+          "rip": "0x7fff3f1af9b4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1af9b4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9f9b4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b822010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x73debb0",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 5464,
+        "stack_guest_pointer_candidates": [
+          {
+            "stack_address": "0x73df698",
+            "stack_offset": "0xbf0",
+            "value": {
+              "address": "0x800000004",
+              "kind": "guest",
+              "image_offset": "0x4",
+              "module": "eboot",
+              "module_offset": "0x4",
+              "executable": true
+            }
+          }
+        ],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 25804,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x1b402c0",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0xa3ffa28",
+          "rbp": "0xa3ffa80",
+          "rsi": "0x0",
+          "rdi": "0x1b402c0",
+          "r8": "0x8",
+          "r9": "0xffffffff",
+          "r10": "0x8",
+          "r11": "0x7ff7d62c010c",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0xa3ffa50",
+          "r15": "0x7ff7d6a51670",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0xa3ffa80",
+            "return": {
+              "address": "0xa3ffbd0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0xa3ffb90",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1496,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 14268,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0xc98",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0xb52f8c8",
+          "rbp": "0xb52fa60",
+          "rsi": "0x0",
+          "rdi": "0xc98",
+          "r8": "0x3a47a4b096fb02a4",
+          "r9": "0xb52fa60",
+          "r10": "0x0",
+          "r11": "0x200246",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0xc98",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0xb52fa60",
+            "return": {
+              "address": "0x1ad1480",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1848,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 25476,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0x37c",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0xcddfac8",
+          "rbp": "0x0",
+          "rsi": "0x0",
+          "rdi": "0x37c",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0xcddf6e0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x37c",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1336,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 24232,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d5",
+          "rcx": "0x14",
+          "rdx": "0xb79d920",
+          "rbx": "0xb79dca0",
+          "rsp": "0xdddfaa8",
+          "rbp": "0x0",
+          "rsi": "0x1ad0b50",
+          "rdi": "0xb79dca0",
+          "r8": "0x0",
+          "r9": "0x13",
+          "r10": "0x0",
+          "r11": "0x281c000000000000",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1b1034"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b1034",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa1034"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d6010000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1368,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 22808,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0x1",
+          "rdx": "0xb7b7480",
+          "rbx": "0x1",
+          "rsp": "0xeddf3f8",
+          "rbp": "0xeddfb59",
+          "rsi": "0x0",
+          "rdi": "0x1",
+          "r8": "0xb7defd0",
+          "r9": "0x80000",
+          "r10": "0x0",
+          "r11": "0x246",
+          "r12": "0xffffffff",
+          "r13": "0xb7b7480",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 3080,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 21852,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1006",
+          "rcx": "0x105df6a0",
+          "rdx": "0x0",
+          "rbx": "0x105df6a0",
+          "rsp": "0x105df5f8",
+          "rbp": "0x7fff3e59e1e0",
+          "rsi": "0x105df6a0",
+          "rdi": "0xb7d2970",
+          "r8": "0x105df5f8",
+          "r9": "0x7fff3f27c110",
+          "r10": "0x0",
+          "r11": "0x246",
+          "r12": "0x7fff3e5b2100",
+          "r13": "0x7fff3e599170",
+          "r14": "0x1",
+          "r15": "0x7ffef6c96768",
+          "rip": "0x7fff3d0b1104"
+        },
+        "instruction": {
+          "address": "0x7fff3d0b1104",
+          "kind": "host",
+          "module": "win32u.dll",
+          "module_offset": "0x1104"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b807100000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2568,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 17696,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0x1",
+          "rdx": "0x10740a80",
+          "rbx": "0x1",
+          "rsp": "0x52a1f8c8",
+          "rbp": "0x0",
+          "rsi": "0x0",
+          "rdi": "0x1",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x3a98",
+          "r13": "0x10740a80",
+          "r14": "0x52a1f920",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1848,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 24960,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0x1",
+          "rdx": "0x54c0f660",
+          "rbx": "0x1",
+          "rsp": "0x54c0f318",
+          "rbp": "0xb90",
+          "rsi": "0x0",
+          "rdi": "0x1",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0xffffffff",
+          "r13": "0x54c0f660",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 3304,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 23988,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d5",
+          "rcx": "0x14",
+          "rdx": "0x107af700",
+          "rbx": "0x107afa80",
+          "rsp": "0x55c0fbd8",
+          "rbp": "0x0",
+          "rsi": "0x1ad0b50",
+          "rdi": "0x107afa80",
+          "r8": "0x0",
+          "r9": "0x55c0f130",
+          "r10": "0x0",
+          "r11": "0x55c0f0c0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1b1034"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b1034",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa1034"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d6010000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1064,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26292,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x10636ea0",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x5742f708",
+          "rbp": "0x5742f760",
+          "rsi": "0x0",
+          "rdi": "0x10636ea0",
+          "r8": "0x4acfa450eb58b984",
+          "r9": "0x7ffea000",
+          "r10": "0x1",
+          "r11": "0xfffffffff8044c97",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x5742f730",
+          "r15": "0x50c4b0d0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x5742f760",
+            "return": {
+              "address": "0x50c4b0d0",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2296,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 22712,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0x3",
+          "rdx": "0x10af01f0",
+          "rbx": "0x3",
+          "rsp": "0x5842f7f8",
+          "rbp": "0x0",
+          "rsi": "0x0",
+          "rdi": "0x3",
+          "r8": "0x4",
+          "r9": "0x0",
+          "r10": "0x10a22680",
+          "r11": "0x42",
+          "r12": "0xffffffff",
+          "r13": "0x10af01f0",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2056,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 14784,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0x3",
+          "rdx": "0x10af1000",
+          "rbx": "0x3",
+          "rsp": "0x5b42f598",
+          "rbp": "0x0",
+          "rsi": "0x0",
+          "rdi": "0x3",
+          "r8": "0x80000000000000",
+          "r9": "0x0",
+          "r10": "0x10a22680",
+          "r11": "0x77",
+          "r12": "0xffffffff",
+          "r13": "0x10af1000",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2664,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26040,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0xf14",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x5e42f978",
+          "rbp": "0x0",
+          "rsi": "0x5e42f9a8",
+          "rdi": "0xf14",
+          "r8": "0x80",
+          "r9": "0x10ae6240",
+          "r10": "0x11521060",
+          "r11": "0x11520080",
+          "r12": "0x7ffe6b98def0",
+          "r13": "0x7ffe6b98df20",
+          "r14": "0xf14",
+          "r15": "0x1",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1672,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 12016,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0xf20",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x5f42fb88",
+          "rbp": "0x10dd1c78",
+          "rsi": "0x0",
+          "rdi": "0xf20",
+          "r8": "0x80",
+          "r9": "0x10ae8240",
+          "r10": "0x115c1060",
+          "r11": "0x115c0080",
+          "r12": "0x0",
+          "r13": "0x10dd1b80",
+          "r14": "0xf20",
+          "r15": "0x1",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1144,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 9728,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0xf10",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6042f708",
+          "rbp": "0x0",
+          "rsi": "0x0",
+          "rdi": "0xf10",
+          "r8": "0x80",
+          "r9": "0x10aea240",
+          "r10": "0x11681060",
+          "r11": "0x11680080",
+          "r12": "0x0",
+          "r13": "0xffffffff",
+          "r14": "0xf10",
+          "r15": "0xffffffff",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2296,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 24284,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0xf78",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6142f848",
+          "rbp": "0x7",
+          "rsi": "0x6142f878",
+          "rdi": "0xf78",
+          "r8": "0x200",
+          "r9": "0x0",
+          "r10": "0x10a22680",
+          "r11": "0xc9",
+          "r12": "0x431bde82d7b634db",
+          "r13": "0x11150080",
+          "r14": "0xf78",
+          "r15": "0x18df37e3d28cfbdc",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1976,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 24892,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0xe98",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6242f638",
+          "rbp": "0x6242f7b9",
+          "rsi": "0x6242f668",
+          "rdi": "0xe98",
+          "r8": "0x6242f683",
+          "r9": "0x7ffea000",
+          "r10": "0x1",
+          "r11": "0xfffffffff8044c97",
+          "r12": "0xffffffff",
+          "r13": "0x0",
+          "r14": "0xe98",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2504,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 25828,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0xb7b3620",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6342fa58",
+          "rbp": "0x6342fab0",
+          "rsi": "0x0",
+          "rdi": "0xb7b3620",
+          "r8": "0x8",
+          "r9": "0xffffffff",
+          "r10": "0x8",
+          "r11": "0x7ff7d62c010c",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x6342fa80",
+          "r15": "0x107c7cd0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6342fab0",
+            "return": {
+              "address": "0xb7b3620",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1448,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 20660,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0xb7b3860",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6442f818",
+          "rbp": "0x6442f870",
+          "rsi": "0x0",
+          "rdi": "0xb7b3860",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x6442f840",
+          "r15": "0x107c7b50",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6442f870",
+            "return": {
+              "address": "0x6442f970",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2024,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 14812,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0xb7b3720",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6542f7f8",
+          "rbp": "0x6542f850",
+          "rsi": "0x0",
+          "rdi": "0xb7b3720",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x6542f820",
+          "r15": "0x107c8290",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6542f850",
+            "return": {
+              "address": "0x6542f950",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2056,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 23612,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x50d33b60",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6642f908",
+          "rbp": "0x6642f960",
+          "rsi": "0x0",
+          "rdi": "0x50d33b60",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x6642f930",
+          "r15": "0x107c89a0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6642f960",
+            "return": {
+              "address": "0x6642fa60",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1784,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 24668,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0x1128",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x67c2f9a8",
+          "rbp": "0x0",
+          "rsi": "0x67c2f9d8",
+          "rdi": "0x1128",
+          "r8": "0x0",
+          "r9": "0x2",
+          "r10": "0x9e0c2e5b32d12870",
+          "r11": "0x246",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x1128",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1624,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 24168,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0xa",
+          "rdx": "0x6943fda0",
+          "rbx": "0xa",
+          "rsp": "0x6943fa48",
+          "rbp": "0x6943fe00",
+          "rsi": "0x0",
+          "rdi": "0xa",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0xffffffff",
+          "r13": "0x6943fda0",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6943fe00",
+            "return": {
+              "address": "0x7fff2c99e09a",
+              "kind": "host",
+              "module": "nvwgf2umx.dll",
+              "module_offset": "0xece09a"
+            }
+          }
+        ],
+        "stack_bytes_read": 1464,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 5696,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0x11ec",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6a43f608",
+          "rbp": "0x6a43f7b0",
+          "rsi": "0x6a43f638",
+          "rdi": "0x11ec",
+          "r8": "0x6a43f608",
+          "r9": "0x6a43f7b0",
+          "r10": "0x0",
+          "r11": "0x246",
+          "r12": "0xffffffffffffffff",
+          "r13": "0x0",
+          "r14": "0x11ec",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6a43f7b0",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2552,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 24996,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x4",
+          "rcx": "0x1260",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6b43f7d8",
+          "rbp": "0x664e8780",
+          "rsi": "0x0",
+          "rdi": "0x1260",
+          "r8": "0x66925420",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x246",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x1260",
+          "r15": "0x50fa6a50",
+          "rip": "0x7fff3f1ad624"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad624",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d624"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b805000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2088,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 2188,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x664a6018",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6c43fb48",
+          "rbp": "0x6c43fba0",
+          "rsi": "0x0",
+          "rdi": "0x664a6018",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x6c43fb70",
+          "r15": "0x664a6060",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6c43fba0",
+            "return": {
+              "address": "0x664a6058",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1208,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26076,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x664a6018",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x6d43fa68",
+          "rbp": "0x6d43fac0",
+          "rsi": "0x0",
+          "rdi": "0x664a6018",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x6d43fa98",
+          "r15": "0x664a6060",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6d43fac0",
+            "return": {
+              "address": "0x664a6058",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1432,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 22088,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0xa",
+          "rdx": "0x6e43f960",
+          "rbx": "0xa",
+          "rsp": "0x6e43f608",
+          "rbp": "0x6e43f9c0",
+          "rsi": "0x0",
+          "rdi": "0xa",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0xffffffff",
+          "r13": "0x6e43f960",
+          "r14": "0x0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x6e43f9c0",
+            "return": {
+              "address": "0x7fff2c99e09a",
+              "kind": "host",
+              "module": "nvwgf2umx.dll",
+              "module_offset": "0xece09a"
+            }
+          }
+        ],
+        "stack_bytes_read": 2552,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26104,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0x2",
+          "rdx": "0x6f43fbd0",
+          "rbx": "0x2",
+          "rsp": "0x6f43f878",
+          "rbp": "0x0",
+          "rsi": "0x0",
+          "rdi": "0x2",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x1f4",
+          "r13": "0x6f43fbd0",
+          "r14": "0x6f43f8d0",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 1928,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 25056,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x5b",
+          "rcx": "0x2",
+          "rdx": "0x7043f890",
+          "rbx": "0x2",
+          "rsp": "0x7043f518",
+          "rbp": "0x1",
+          "rsi": "0x0",
+          "rdi": "0x2",
+          "r8": "0x0",
+          "r9": "0x2",
+          "r10": "0x4",
+          "r11": "0x4",
+          "r12": "0x1f4",
+          "r13": "0x7043f890",
+          "r14": "0x7043f570",
+          "r15": "0x0",
+          "rip": "0x7fff3f1ae0f4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ae0f4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9e0f4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b85c000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2792,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26500,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66b77278",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x7f77fba8",
+          "rbp": "0x7f77fc00",
+          "rsi": "0x0",
+          "rdi": "0x66b77278",
+          "r8": "0x668a8ad0",
+          "r9": "0x1",
+          "r10": "0x8000",
+          "r11": "0x7f77fd30",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x7f77fbd0",
+          "r15": "0x66b77280",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x7f77fc00",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x7f77fd68",
+            "return": {
+              "address": "0x66a9ea01",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1112,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 5744,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66b77278",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13484f5b8",
+          "rbp": "0x13484f610",
+          "rsi": "0x0",
+          "rdi": "0x66b77278",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13484f5e8",
+          "r15": "0x66b77280",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13484f610",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x13484f778",
+            "return": {
+              "address": "0x66a9f001",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2632,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26476,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66b773d8",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13681f898",
+          "rbp": "0x13681f8f0",
+          "rsi": "0x0",
+          "rdi": "0x66b773d8",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13681f8c0",
+          "r15": "0x66b773e0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13681f8f0",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x13681fa58",
+            "return": {
+              "address": "0x66a9ed01",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1896,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 20264,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66b773d8",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13781f828",
+          "rbp": "0x13781f880",
+          "rsi": "0x0",
+          "rdi": "0x66b773d8",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13781f858",
+          "r15": "0x66b773e0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13781f880",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x13781f9e8",
+            "return": {
+              "address": "0x66a9eb01",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2008,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 22728,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66b773d8",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13881fbd8",
+          "rbp": "0x13881fc30",
+          "rsi": "0x0",
+          "rdi": "0x66b773d8",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13881fc08",
+          "r15": "0x66b773e0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13881fc30",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x13881fd98",
+            "return": {
+              "address": "0x66a9ed01",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1064,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 3060,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66b773d8",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13981f618",
+          "rbp": "0x13981f670",
+          "rsi": "0x0",
+          "rdi": "0x66b773d8",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13981f648",
+          "r15": "0x66b773e0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13981f670",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x13981f7d8",
+            "return": {
+              "address": "0x66a9f001",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2536,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 14520,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66b773d8",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13a81f848",
+          "rbp": "0x13a81f8a0",
+          "rsi": "0x0",
+          "rdi": "0x66b773d8",
+          "r8": "0x0",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13a81f878",
+          "r15": "0x66b773e0",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13a81f8a0",
+            "return": {
+              "address": "0x0",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x13a81fa08",
+            "return": {
+              "address": "0x66a9ef01",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 1976,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 26036,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0xf",
+          "rcx": "0x25f8",
+          "rdx": "0xffffffffffffffff",
+          "rbx": "0x25f8",
+          "rsp": "0x13b81f7c8",
+          "rbp": "0x0",
+          "rsi": "0x13b81f9c0",
+          "rdi": "0x13b81f8c0",
+          "r8": "0x1594",
+          "r9": "0x7fff3c9f0000",
+          "r10": "0x1350e5850",
+          "r11": "0x13511ba70",
+          "r12": "0x25f8",
+          "r13": "0x7ffef3c7d4a0",
+          "r14": "0x0",
+          "r15": "0x7ffef3c7d140",
+          "rip": "0x7fff3f1ad784"
+        },
+        "instruction": {
+          "address": "0x7fff3f1ad784",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9d784"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b810000000f604250803fe7f0175030f05",
+        "rbp_chain": [],
+        "stack_bytes_read": 2104,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 23308,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66c29c50",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13c81f818",
+          "rbp": "0x13c81f870",
+          "rsi": "0x0",
+          "rdi": "0x66c29c50",
+          "r8": "0x34000",
+          "r9": "0x328",
+          "r10": "0x134e32020",
+          "r11": "0x134eab540",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13c81f848",
+          "r15": "0x66545520",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13c81f870",
+            "return": {
+              "address": "0x2",
+              "kind": "unknown"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x13c81fb48",
+            "return": {
+              "address": "0x66c29d40",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 2024,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 16812,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66c29c50",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13d81eba8",
+          "rbp": "0x13d81ec00",
+          "rsi": "0x0",
+          "rdi": "0x66c29c50",
+          "r8": "0x8",
+          "r9": "0xffffffff",
+          "r10": "0x8",
+          "r11": "0x7ff7d62c010c",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13d81ebd8",
+          "r15": "0x66545520",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13d81ec00",
+            "return": {
+              "address": "0x66c29d60",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 5208,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 1736,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66c29c50",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13e81f178",
+          "rbp": "0x13e81f1d0",
+          "rsi": "0x0",
+          "rdi": "0x66c29c50",
+          "r8": "0x58",
+          "r9": "0x0",
+          "r10": "0x0",
+          "r11": "0x13e81f1d0",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13e81f1a8",
+          "r15": "0x66545520",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13e81f1d0",
+            "return": {
+              "address": "0x66c29b40",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 3720,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 22544,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x1d2",
+          "rcx": "0x66c29c50",
+          "rdx": "0x0",
+          "rbx": "0x0",
+          "rsp": "0x13f81f0e8",
+          "rbp": "0x13f81f140",
+          "rsi": "0x0",
+          "rdi": "0x66c29c50",
+          "r8": "0x1",
+          "r9": "0x66545520",
+          "r10": "0x66c29c50",
+          "r11": "0x66545520",
+          "r12": "0x0",
+          "r13": "0x0",
+          "r14": "0x13f81f110",
+          "r15": "0x66545520",
+          "rip": "0x7fff3f1b0fd4"
+        },
+        "instruction": {
+          "address": "0x7fff3f1b0fd4",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0xa0fd4"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b8d3010000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x13f81f140",
+            "return": {
+              "address": "0x66c29a60",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 3864,
+        "stack_guest_pointer_candidates": [],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 18136,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 23784,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 25456,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 25080,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 9060,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 23736,
+        "name": null,
+        "errors": [],
+        "previous_suspend_count": 0,
+        "registers": {
+          "rax": "0x34",
+          "rcx": "0x0",
+          "rdx": "0x14882e120",
+          "rbx": "0x0",
+          "rsp": "0x14882e0f8",
+          "rbp": "0x14882e5c0",
+          "rsi": "0x0",
+          "rdi": "0x32",
+          "r8": "0x668b7ad0",
+          "r9": "0x0",
+          "r10": "0x7fff3f27d360",
+          "r11": "0x50ca7ad0",
+          "r12": "0x7ffecd2dfc90",
+          "r13": "0x14882ef41",
+          "r14": "0x7ffecd200000",
+          "r15": "0x1",
+          "rip": "0x7fff3f1adc24"
+        },
+        "instruction": {
+          "address": "0x7fff3f1adc24",
+          "kind": "host",
+          "module": "ntdll.dll",
+          "module_offset": "0x9dc24"
+        },
+        "instruction_bytes": "c3cd2ec30f1f8400000000004c8bd1b835000000f604250803fe7f0175030f05",
+        "rbp_chain": [
+          {
+            "frame": 0,
+            "rbp": "0x14882e5c0",
+            "return": {
+              "address": "0x7ff7d5fe961c",
+              "kind": "host",
+              "module": "p3d-runtime.exe",
+              "module_offset": "0x14961c"
+            }
+          },
+          {
+            "frame": 1,
+            "rbp": "0x14882e5f0",
+            "return": {
+              "address": "0x14882e700",
+              "kind": "unknown"
+            }
+          }
+        ],
+        "stack_bytes_read": 7944,
+        "stack_guest_pointer_candidates": [
+          {
+            "stack_address": "0x14882f248",
+            "stack_offset": "0x1150",
+            "value": {
+              "address": "0x80000014a",
+              "kind": "guest",
+              "image_offset": "0x14a",
+              "module": "eboot",
+              "module_offset": "0x14a",
+              "executable": true
+            }
+          }
+        ],
+        "stack_candidates_truncated": false,
+        "resume_succeeded": true
+      },
+      {
+        "tid": 10072,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 26100,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 23980,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 8940,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 2192,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 8588,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 1584,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 23200,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      },
+      {
+        "tid": 26220,
+        "name": null,
+        "errors": [
+          "SuspendThread: Win32 5: Acceso denegado."
+        ]
+      }
+    ]
+  },
+  "termination": "terminated only the child created by this invocation",
+  "exit_code": 1,
+  "elapsed_seconds": 1.625,
+  "finished_utc": "2026-10-17T04:50:28.804284+00:00",
+  "missing_imports": [],
+  "original_entry_observed": true,
+  "last_log_lines": [
+    "  Size:           0x870000 bytes",
+    "  Format:         B10G11R11UfloatPack32",
+    "  Type:           9",
+    "  Width:          1920",
+    "  Height:         1080",
+    "  Depth:          1",
+    "  Pitch:          1920",
+    "  Mip levels:     1",
+    "  Array layers:   1",
+    "  Samples:        1",
+    "  Tile mode:      0xa",
+    "  Block size:     32 bits",
+    "  Is block-comp:  0",
+    "  Guest size:     0x870000",
+    "  isPow2:         false",
+    "  Alt tile:       false",
+    "",
+    "=== COMPARISON ===",
+    "  Same format:           true",
+    "  Same type:             true",
+    "  Same tile mode:        true",
+    "  Same block size:       true",
+    "  Same BlockDim:         true",
+    "  Same pitch:            true",
+    "  Same pow2:             true",
+    "  Same alt tile:         true",
+    "  Old resources <= new:  true (old: 1, new: 1)",
+    "  Old size <= new size:  true",
+    "  Expected size (calc):  8294400 bytes",
+    "  Size ratio (new/expected): 1.07x",
+    "  Size ratio (new/old):  1.06x",
+    "  Old vs expected diff:  61440 bytes (+0.74%)",
+    "  New vs expected diff:  552960 bytes (+6.67%)",
+    "  Merged image ID:       4294967295",
+    "  Binding type:          2",
+    "  Current tick:          7",
+    "  Age (ticks since last access): 2",
+    "GPU [Debug] <Critical> texture_cache.cpp:965 ResolveOverlap: Unreachable code!",
+    "Encountered unresolvable image overlap with equal memory address.",
+    "STOP: GPU library assertion failed (see GPU log above)"
+  ]
+}

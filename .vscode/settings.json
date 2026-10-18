@@ -1,0 +1,4 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/engine/gpu",
+    "cmake.buildDirectory": "${workspaceFolder}/engine/out/gpu"
+}

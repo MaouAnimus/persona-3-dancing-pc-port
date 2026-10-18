@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\bin\\p3d_engine.exe",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+    "--app0",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+    "--user",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\test-builtin-scene-20261018T015156Z\\user",
+    "--timeout",
+    "0"
+  ],
+  "executable_sha256": "4615639546e6ee3f2ed3deef3c9d7b116693393bdd0578c4afdd60b767423354",
+  "environment": {
+    "GOW3_PAD_FILE": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\test-builtin-scene-20261018T015156Z\\pad.txt",
+    "GOW3_GPU_LOG": "info",
+    "GOW3_UPSCALER": "none",
+    "GOW3_GPU_USER_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\user",
+    "GOW3_FRAME_DUMP_TRIGGER": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\test-builtin-scene-20261018T015156Z\\capture.request",
+    "GOW3_DUMP_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\test-builtin-scene-20261018T015156Z"
+  },
+  "started_utc": "2026-10-18T01:51:57.737204+00:00",
+  "output": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\test-builtin-scene-20261018T015156Z",
+  "pulses": 16,
+  "pid": 22124,
+  "observed_exit_code": null,
+  "deadline_reached": true,
+  "cleanup": "terminated only the owned regression process at the deadline",
+  "elapsed_seconds": 30.391
+}

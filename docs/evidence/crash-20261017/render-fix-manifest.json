@@ -1,0 +1,131 @@
+{
+  "created_utc": "2026-10-18T00:31:58.429711+00:00",
+  "files": {
+    "engine/gpu/shadps4/video_core/amdgpu/liverpool.cpp": "cc837014579919e5b4ecb91841f07a7e43cddabee1aab923a58e5cf212b825df",
+    "engine/gpu/shadps4/video_core/renderer_vulkan/vk_scheduler.cpp": "715c4db46b54b1f66d4d9bfde6d9daf87c859c2196e9b905efa7f78922038e95",
+    "engine/gpu/shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp": "1c191f33f6c8348ec9c7ec52be4e125a399fd377d61dd5e35ad96b4495aaf226",
+    "engine/gpu/shadps4/video_core/renderer_vulkan/vk_rasterizer.h": "e32c4875c7a7c410bd575e0347fbdd4498de2e7634008beb3c053fd3e54d681f",
+    "engine/out/gpu/p3d.exe": "3c2a042624f8d14fef1c58269533623e6c9d96552765350ca0208156c2a5041c",
+    "bin/p3d_engine.exe": "3c2a042624f8d14fef1c58269533623e6c9d96552765350ca0208156c2a5041c",
+    "bin/p3d.exe": "3c2a042624f8d14fef1c58269533623e6c9d96552765350ca0208156c2a5041c",
+    "p3d.exe": "8473915b892fcc9ab67891af0f1c8d06224444340e96caf5abe13abcc8045e27"
+  },
+  "runs": {
+    "current-validation-20261018T002527Z": {
+      "result": {
+        "command": [
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\bin\\p3d_engine.exe",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+          "--app0",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+          "--user",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\current-validation-20261018T002527Z\\user",
+          "--timeout",
+          "0"
+        ],
+        "executable_sha256": "d48705aa6b5a7dfe0da9f6f190b3a75e70b4b6094693f06ff87c5e14cee31d3b",
+        "environment": {
+          "GOW3_PAD_FILE": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\current-validation-20261018T002527Z\\pad.txt",
+          "GOW3_GPU_LOG": "info",
+          "GOW3_UPSCALER": "none",
+          "GOW3_GPU_USER_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\user",
+          "VK_LAYER_PATH": "C:/msys64/clang64/bin",
+          "GOW3_VK_VALIDATION": "1",
+          "GOW3_VK_VALIDATION_SYNC": "1"
+        },
+        "started_utc": "2026-10-18T00:25:28.063962+00:00",
+        "output": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\current-validation-20261018T002527Z",
+        "pulses": 37,
+        "pid": 10608,
+        "observed_exit_code": null,
+        "deadline_reached": true,
+        "cleanup": "terminated only the owned regression process at the deadline",
+        "elapsed_seconds": 60.25
+      },
+      "faults": [],
+      "validation_counts": {
+        "SYNC-HAZARD-WRITE-AFTER-PRESENT": 10,
+        "VUID-VkRenderingInfo-pNext-06079": 10,
+        "VUID-VkRenderingInfo-pNext-06080": 10,
+        "VUID-vkCmdBeginRendering-pRenderingInfo-09592": 10,
+        "VUID-vkCmdPushConstants-commandBuffer-recording": 1,
+        "VUID-vkCmdPushDescriptorSet-commandBuffer-recording": 1,
+        "UNASSIGNED-Threading-MultipleThreads-Write": 1,
+        "VUID-vkCmdDrawIndexed-None-04914": 1,
+        "VUID-vkCmdDrawIndexed-Input-07939": 1,
+        "VUID-vkCmdDrawIndexed-None-08600": 1,
+        "VUID-vkCmdDrawIndexed-None-07312": 1
+      },
+      "window_close_event": false
+    },
+    "fixed-validation-20261018T002847Z": {
+      "result": {
+        "command": [
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\bin\\p3d_engine.exe",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+          "--app0",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+          "--user",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-validation-20261018T002847Z\\user",
+          "--timeout",
+          "0"
+        ],
+        "executable_sha256": "3c2a042624f8d14fef1c58269533623e6c9d96552765350ca0208156c2a5041c",
+        "environment": {
+          "GOW3_PAD_FILE": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-validation-20261018T002847Z\\pad.txt",
+          "GOW3_GPU_LOG": "info",
+          "GOW3_UPSCALER": "none",
+          "GOW3_GPU_USER_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\user",
+          "VK_LAYER_PATH": "C:/msys64/clang64/bin",
+          "GOW3_VK_VALIDATION": "1",
+          "GOW3_VK_VALIDATION_SYNC": "1"
+        },
+        "started_utc": "2026-10-18T00:28:48.033168+00:00",
+        "output": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-validation-20261018T002847Z",
+        "pulses": 24,
+        "pid": 20960,
+        "observed_exit_code": 0,
+        "deadline_reached": false,
+        "elapsed_seconds": 41.641
+      },
+      "faults": [],
+      "validation_counts": {
+        "SYNC-HAZARD-WRITE-AFTER-PRESENT": 10
+      },
+      "window_close_event": true
+    },
+    "fixed-normal-20261018T003007Z": {
+      "result": {
+        "command": [
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\bin\\p3d_engine.exe",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+          "--app0",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+          "--user",
+          "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-normal-20261018T003007Z\\user",
+          "--timeout",
+          "0"
+        ],
+        "executable_sha256": "3c2a042624f8d14fef1c58269533623e6c9d96552765350ca0208156c2a5041c",
+        "environment": {
+          "GOW3_PAD_FILE": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-normal-20261018T003007Z\\pad.txt",
+          "GOW3_GPU_LOG": "info",
+          "GOW3_UPSCALER": "none",
+          "GOW3_GPU_USER_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\user",
+          "GOW3_FRAME_DUMP_TRIGGER": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-normal-20261018T003007Z\\capture.request",
+          "GOW3_DUMP_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-normal-20261018T003007Z"
+        },
+        "started_utc": "2026-10-18T00:30:08.149290+00:00",
+        "output": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\fixed-normal-20261018T003007Z",
+        "pulses": 24,
+        "pid": 14392,
+        "observed_exit_code": 0,
+        "deadline_reached": false,
+        "elapsed_seconds": 41.829
+      },
+      "faults": [],
+      "validation_counts": {},
+      "window_close_event": true
+    }
+  }
+}

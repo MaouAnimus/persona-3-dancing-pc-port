@@ -1,0 +1,2923 @@
+{
+  "schema": "p3d-owned-child-crash-v1",
+  "started_utc": "2026-10-17T21:49:06.892752+00:00",
+  "command": [
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\bin\\p3d_engine.exe",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+    "--app0",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+    "--timeout",
+    "0"
+  ],
+  "cwd": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC",
+  "seconds": 10.0,
+  "log": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\p3d-manual-20261017T214906892752Z.log",
+  "events": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\p3d-manual-20261017T214906892752Z.events.jsonl",
+  "report": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\p3d-manual-20261017T214906892752Z.json",
+  "environment": {
+    "GOW3_GPU_LOG": "info",
+    "GOW3_UPSCALER": "none"
+  },
+  "exit_code": null,
+  "limitations": [
+    "First chance exceptions can be handled normally by the runtime.",
+    "RBP frames and stack pointers are observations, not a full unwind.",
+    "Host frames identify modules and offsets without symbols.",
+    "First chance write AVs used by GPU page tracking do not take snapshots.",
+    "The deadline detaches the owned child and leaves it running."
+  ],
+  "pid": 8592,
+  "deadline_reached": true,
+  "detached_owned_child": true,
+  "child_still_running": true,
+  "elapsed_seconds": 10.0,
+  "finished_utc": "2026-10-17T21:49:16.905250+00:00",
+  "event_counts": {
+    "process_create": 1,
+    "dll_load": 251,
+    "thread_create": 96,
+    "dll_unload": 19,
+    "exception": 134,
+    "thread_exit": 4,
+    "debug_string": 5
+  },
+  "recent_events": [
+    {
+      "utc": "2026-10-17T21:49:07.684750+00:00",
+      "event": "dll_unload",
+      "tid": 24376,
+      "elapsed_seconds": 0.782,
+      "base": "0x7ffa65170000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.685250+00:00",
+      "event": "dll_unload",
+      "tid": 24376,
+      "elapsed_seconds": 0.782,
+      "base": "0x7ffa5a6d0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.702750+00:00",
+      "event": "thread_create",
+      "tid": 26512,
+      "elapsed_seconds": 0.797
+    },
+    {
+      "utc": "2026-10-17T21:49:07.702750+00:00",
+      "event": "thread_create",
+      "tid": 26396,
+      "elapsed_seconds": 0.797
+    },
+    {
+      "utc": "2026-10-17T21:49:07.707252+00:00",
+      "event": "thread_create",
+      "tid": 24008,
+      "elapsed_seconds": 0.813
+    },
+    {
+      "utc": "2026-10-17T21:49:07.707252+00:00",
+      "event": "thread_create",
+      "tid": 24744,
+      "elapsed_seconds": 0.813
+    },
+    {
+      "utc": "2026-10-17T21:49:07.723251+00:00",
+      "event": "thread_create",
+      "tid": 27236,
+      "elapsed_seconds": 0.829
+    },
+    {
+      "utc": "2026-10-17T21:49:07.737750+00:00",
+      "event": "thread_create",
+      "tid": 1728,
+      "elapsed_seconds": 0.844
+    },
+    {
+      "utc": "2026-10-17T21:49:07.739751+00:00",
+      "event": "thread_create",
+      "tid": 14948,
+      "elapsed_seconds": 0.844
+    },
+    {
+      "utc": "2026-10-17T21:49:07.741252+00:00",
+      "event": "thread_create",
+      "tid": 2156,
+      "elapsed_seconds": 0.844
+    },
+    {
+      "utc": "2026-10-17T21:49:07.742752+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 0.844,
+      "base": "0x7ffa5a4e0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.744250+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 0.844,
+      "base": "0x7ffa59750000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.752751+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 0.86,
+      "base": "0x7ff9df7d0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.754252+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 0.86,
+      "base": "0x7ff9d0770000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.760750+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 0.86,
+      "base": "0x7ffa58e60000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.850251+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 0.954,
+      "base": "0x7ffa50690000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.850751+00:00",
+      "event": "dll_load",
+      "tid": 8436,
+      "elapsed_seconds": 0.954,
+      "base": "0x7ffa64360000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.851251+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 0.954,
+      "base": "0x7ffa64340000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.932751+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 1.032,
+      "base": "0x7ffa4afc0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:07.954751+00:00",
+      "event": "thread_create",
+      "tid": 1500,
+      "elapsed_seconds": 1.063
+    },
+    {
+      "utc": "2026-10-17T21:49:07.961753+00:00",
+      "event": "thread_exit",
+      "tid": 1500,
+      "elapsed_seconds": 1.063,
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-17T21:49:07.963251+00:00",
+      "event": "thread_create",
+      "tid": 25796,
+      "elapsed_seconds": 1.063
+    },
+    {
+      "utc": "2026-10-17T21:49:07.964251+00:00",
+      "event": "thread_create",
+      "tid": 15208,
+      "elapsed_seconds": 1.063
+    },
+    {
+      "utc": "2026-10-17T21:49:07.984752+00:00",
+      "event": "thread_create",
+      "tid": 6788,
+      "elapsed_seconds": 1.079
+    },
+    {
+      "utc": "2026-10-17T21:49:08.038751+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 1.141,
+      "base": "0x7ffa1fbc0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.056250+00:00",
+      "event": "thread_create",
+      "tid": 26196,
+      "elapsed_seconds": 1.157
+    },
+    {
+      "utc": "2026-10-17T21:49:08.058751+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 1.157,
+      "base": "0x7ff9795a0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.059751+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 1.157,
+      "base": "0x7ff9fda90000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.062750+00:00",
+      "event": "dll_unload",
+      "tid": 24376,
+      "elapsed_seconds": 1.157,
+      "base": "0x7ff9795a0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.109251+00:00",
+      "event": "thread_create",
+      "tid": 2240,
+      "elapsed_seconds": 1.204
+    },
+    {
+      "utc": "2026-10-17T21:49:08.109251+00:00",
+      "event": "thread_create",
+      "tid": 6364,
+      "elapsed_seconds": 1.204
+    },
+    {
+      "utc": "2026-10-17T21:49:08.111751+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 1.219,
+      "base": "0x7ff9f02e0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.112251+00:00",
+      "event": "dll_load",
+      "tid": 14236,
+      "elapsed_seconds": 1.219,
+      "base": "0x7ffa04c90000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.113251+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 1.219,
+      "base": "0x7ffa5eb90000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.132751+00:00",
+      "event": "thread_create",
+      "tid": 16628,
+      "elapsed_seconds": 1.235
+    },
+    {
+      "utc": "2026-10-17T21:49:08.186251+00:00",
+      "event": "thread_create",
+      "tid": 26520,
+      "elapsed_seconds": 1.282
+    },
+    {
+      "utc": "2026-10-17T21:49:08.186251+00:00",
+      "event": "thread_create",
+      "tid": 3572,
+      "elapsed_seconds": 1.282
+    },
+    {
+      "utc": "2026-10-17T21:49:08.450258+00:00",
+      "event": "dll_load",
+      "tid": 24376,
+      "elapsed_seconds": 1.547,
+      "base": "0x7ff966800000"
+    },
+    {
+      "utc": "2026-10-17T21:49:08.580250+00:00",
+      "event": "thread_create",
+      "tid": 24964,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.580250+00:00",
+      "event": "thread_create",
+      "tid": 24480,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.580751+00:00",
+      "event": "thread_create",
+      "tid": 26416,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.580751+00:00",
+      "event": "thread_create",
+      "tid": 10396,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.580751+00:00",
+      "event": "thread_create",
+      "tid": 5860,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.581253+00:00",
+      "event": "thread_create",
+      "tid": 25836,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.581253+00:00",
+      "event": "thread_create",
+      "tid": 24984,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.581253+00:00",
+      "event": "thread_create",
+      "tid": 23796,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.583251+00:00",
+      "event": "thread_create",
+      "tid": 25020,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.583750+00:00",
+      "event": "thread_create",
+      "tid": 15200,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.583750+00:00",
+      "event": "thread_create",
+      "tid": 26708,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.584251+00:00",
+      "event": "thread_create",
+      "tid": 27080,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.584251+00:00",
+      "event": "thread_create",
+      "tid": 22856,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.584251+00:00",
+      "event": "thread_create",
+      "tid": 26840,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.584750+00:00",
+      "event": "thread_create",
+      "tid": 7792,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.584750+00:00",
+      "event": "thread_create",
+      "tid": 13664,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.584750+00:00",
+      "event": "thread_create",
+      "tid": 23124,
+      "elapsed_seconds": 1.688
+    },
+    {
+      "utc": "2026-10-17T21:49:08.597250+00:00",
+      "event": "thread_create",
+      "tid": 1240,
+      "elapsed_seconds": 1.704
+    },
+    {
+      "utc": "2026-10-17T21:49:09.035753+00:00",
+      "event": "thread_create",
+      "tid": 23016,
+      "elapsed_seconds": 2.141
+    },
+    {
+      "utc": "2026-10-17T21:49:09.036251+00:00",
+      "event": "thread_create",
+      "tid": 23896,
+      "elapsed_seconds": 2.141
+    },
+    {
+      "utc": "2026-10-17T21:49:09.038750+00:00",
+      "event": "thread_create",
+      "tid": 26292,
+      "elapsed_seconds": 2.141
+    },
+    {
+      "utc": "2026-10-17T21:49:09.039251+00:00",
+      "event": "thread_create",
+      "tid": 24220,
+      "elapsed_seconds": 2.141
+    },
+    {
+      "utc": "2026-10-17T21:49:09.044751+00:00",
+      "event": "thread_create",
+      "tid": 15460,
+      "elapsed_seconds": 2.141
+    },
+    {
+      "utc": "2026-10-17T21:49:09.050751+00:00",
+      "event": "thread_create",
+      "tid": 13812,
+      "elapsed_seconds": 2.157
+    },
+    {
+      "utc": "2026-10-17T21:49:09.093750+00:00",
+      "event": "thread_create",
+      "tid": 24668,
+      "elapsed_seconds": 2.188
+    },
+    {
+      "utc": "2026-10-17T21:49:09.094751+00:00",
+      "event": "thread_create",
+      "tid": 23916,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.095251+00:00",
+      "event": "exception",
+      "tid": 24668,
+      "elapsed_seconds": 2.204,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2d39ffcf0",
+        "0x605c"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.095750+00:00",
+      "event": "thread_create",
+      "tid": 25380,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.096250+00:00",
+      "event": "exception",
+      "tid": 23916,
+      "elapsed_seconds": 2.204,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2d49ffaa0",
+        "0x5d6c"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.096250+00:00",
+      "event": "thread_create",
+      "tid": 15044,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.096751+00:00",
+      "event": "exception",
+      "tid": 25380,
+      "elapsed_seconds": 2.204,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2d59ffc60",
+        "0x6324"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.096751+00:00",
+      "event": "exception",
+      "tid": 15044,
+      "elapsed_seconds": 2.204,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2d69ffc60",
+        "0x3ac4"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.106250+00:00",
+      "event": "thread_create",
+      "tid": 10676,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.106250+00:00",
+      "event": "thread_create",
+      "tid": 2628,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.106750+00:00",
+      "event": "thread_create",
+      "tid": 25740,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.107252+00:00",
+      "event": "exception",
+      "tid": 10676,
+      "elapsed_seconds": 2.204,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2d79ff9a0",
+        "0x29b4"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.107252+00:00",
+      "event": "thread_create",
+      "tid": 2380,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.108252+00:00",
+      "event": "thread_create",
+      "tid": 25960,
+      "elapsed_seconds": 2.204
+    },
+    {
+      "utc": "2026-10-17T21:49:09.119251+00:00",
+      "event": "exception",
+      "tid": 2628,
+      "elapsed_seconds": 2.219,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2d89ff8c0",
+        "0xa44"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.119750+00:00",
+      "event": "exception",
+      "tid": 25740,
+      "elapsed_seconds": 2.219,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2d99ff830",
+        "0x648c"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.120250+00:00",
+      "event": "exception",
+      "tid": 2380,
+      "elapsed_seconds": 2.219,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2da9ffae0",
+        "0x94c"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.120751+00:00",
+      "event": "exception",
+      "tid": 25960,
+      "elapsed_seconds": 2.219,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2db9ff6c0",
+        "0x6568"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.132250+00:00",
+      "event": "thread_create",
+      "tid": 2164,
+      "elapsed_seconds": 2.235
+    },
+    {
+      "utc": "2026-10-17T21:49:09.142251+00:00",
+      "event": "thread_create",
+      "tid": 26732,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "utc": "2026-10-17T21:49:09.142751+00:00",
+      "event": "exception",
+      "tid": 26732,
+      "elapsed_seconds": 2.25,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x7ffa4c523220",
+        "0xffffffff",
+        "0x0",
+        "0x0",
+        "0x7ffa4ba59522"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.145250+00:00",
+      "event": "thread_create",
+      "tid": 24176,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "utc": "2026-10-17T21:49:09.145750+00:00",
+      "event": "thread_create",
+      "tid": 26084,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "utc": "2026-10-17T21:49:09.146250+00:00",
+      "event": "exception",
+      "tid": 26084,
+      "elapsed_seconds": 2.25,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2e0adfb40",
+        "0x65e4"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.146750+00:00",
+      "event": "thread_create",
+      "tid": 24612,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "utc": "2026-10-17T21:49:09.146750+00:00",
+      "event": "exception",
+      "tid": 24612,
+      "elapsed_seconds": 2.25,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2e1adfa60",
+        "0x6024"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.147251+00:00",
+      "event": "thread_create",
+      "tid": 22944,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "utc": "2026-10-17T21:49:09.147751+00:00",
+      "event": "exception",
+      "tid": 22944,
+      "elapsed_seconds": 2.25,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2e2adfa30",
+        "0x59a0"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.148251+00:00",
+      "event": "thread_create",
+      "tid": 23636,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "utc": "2026-10-17T21:49:09.148251+00:00",
+      "event": "thread_create",
+      "tid": 25268,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "utc": "2026-10-17T21:49:09.148751+00:00",
+      "event": "exception",
+      "tid": 23636,
+      "elapsed_seconds": 2.25,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2e3adf780",
+        "0x5c54"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.148751+00:00",
+      "event": "exception",
+      "tid": 25268,
+      "elapsed_seconds": 2.25,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2e4adfc70",
+        "0x62b4"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.160249+00:00",
+      "event": "thread_create",
+      "tid": 10940,
+      "elapsed_seconds": 2.266
+    },
+    {
+      "utc": "2026-10-17T21:49:09.160751+00:00",
+      "event": "exception",
+      "tid": 10940,
+      "elapsed_seconds": 2.266,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x7701b5c0",
+        "0xffffffff"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.162751+00:00",
+      "event": "dll_load",
+      "tid": 10940,
+      "elapsed_seconds": 2.266,
+      "base": "0x7ffa5d7c0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.164250+00:00",
+      "event": "dll_load",
+      "tid": 10940,
+      "elapsed_seconds": 2.266,
+      "base": "0x7ffa5c750000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.173752+00:00",
+      "event": "dll_load",
+      "tid": 10940,
+      "elapsed_seconds": 2.282,
+      "base": "0x7ffa3f5e0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.179252+00:00",
+      "event": "dll_load",
+      "tid": 10940,
+      "elapsed_seconds": 2.282,
+      "base": "0x7ffa61f40000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.215752+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.313,
+      "base": "0x7ffa5f4d0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.224750+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.329,
+      "base": "0x7ffa435b0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.227750+00:00",
+      "event": "thread_create",
+      "tid": 23844,
+      "elapsed_seconds": 2.329
+    },
+    {
+      "utc": "2026-10-17T21:49:09.228751+00:00",
+      "event": "exception",
+      "tid": 23844,
+      "elapsed_seconds": 2.329,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x77060d80",
+        "0xffffffff"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.232750+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.329,
+      "base": "0x7ffa437b0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.241251+00:00",
+      "event": "thread_create",
+      "tid": 23216,
+      "elapsed_seconds": 2.344
+    },
+    {
+      "utc": "2026-10-17T21:49:09.243251+00:00",
+      "event": "thread_create",
+      "tid": 26632,
+      "elapsed_seconds": 2.344
+    },
+    {
+      "utc": "2026-10-17T21:49:09.244751+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.344,
+      "base": "0x7ffa3d2e0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.248250+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.344,
+      "base": "0x7ffa45b10000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.248750+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.344,
+      "base": "0x7ffa46b40000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.248750+00:00",
+      "event": "dll_load",
+      "tid": 8436,
+      "elapsed_seconds": 2.344,
+      "base": "0x7ffa63960000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.249250+00:00",
+      "event": "dll_load",
+      "tid": 14236,
+      "elapsed_seconds": 2.344,
+      "base": "0x7ffa5a8e0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.250749+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa3e540000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.250749+00:00",
+      "event": "dll_load",
+      "tid": 24572,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa5c240000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.251750+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa3e470000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.252249+00:00",
+      "event": "thread_create",
+      "tid": 320,
+      "elapsed_seconds": 2.36
+    },
+    {
+      "utc": "2026-10-17T21:49:09.259751+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa617e0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.260750+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa3d220000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.261250+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa47410000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.262250+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa3d000000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.262752+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa3cff0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.263250+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa3cfd0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.263750+00:00",
+      "event": "dll_load",
+      "tid": 16876,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa3cfb0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.263750+00:00",
+      "event": "dll_load",
+      "tid": 14236,
+      "elapsed_seconds": 2.36,
+      "base": "0x7ffa361e0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.267264+00:00",
+      "event": "dll_load",
+      "tid": 1812,
+      "elapsed_seconds": 2.375,
+      "base": "0x7ffa31a00000"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.316250+00:00",
+      "event": "thread_create",
+      "tid": 22220,
+      "elapsed_seconds": 2.422
+    },
+    {
+      "utc": "2026-10-17T21:49:09.316750+00:00",
+      "event": "thread_create",
+      "tid": 27388,
+      "elapsed_seconds": 2.422
+    },
+    {
+      "utc": "2026-10-17T21:49:09.409751+00:00",
+      "event": "thread_create",
+      "tid": 1456,
+      "elapsed_seconds": 2.516
+    },
+    {
+      "utc": "2026-10-17T21:49:09.410752+00:00",
+      "event": "exception",
+      "tid": 1456,
+      "elapsed_seconds": 2.516,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2ecadfa60",
+        "0x5b0"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.411251+00:00",
+      "event": "thread_create",
+      "tid": 10424,
+      "elapsed_seconds": 2.516
+    },
+    {
+      "utc": "2026-10-17T21:49:09.411752+00:00",
+      "event": "exception",
+      "tid": 10424,
+      "elapsed_seconds": 2.516,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2edadf6b0",
+        "0x28b8"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.412751+00:00",
+      "event": "thread_create",
+      "tid": 15696,
+      "elapsed_seconds": 2.516
+    },
+    {
+      "utc": "2026-10-17T21:49:09.413251+00:00",
+      "event": "exception",
+      "tid": 15696,
+      "elapsed_seconds": 2.516,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2eeadfc90",
+        "0x3d50"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.414250+00:00",
+      "event": "thread_create",
+      "tid": 8080,
+      "elapsed_seconds": 2.516
+    },
+    {
+      "utc": "2026-10-17T21:49:09.414750+00:00",
+      "event": "exception",
+      "tid": 8080,
+      "elapsed_seconds": 2.516,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2efadf9d0",
+        "0x1f90"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.415750+00:00",
+      "event": "thread_create",
+      "tid": 26180,
+      "elapsed_seconds": 2.516
+    },
+    {
+      "utc": "2026-10-17T21:49:09.416752+00:00",
+      "event": "exception",
+      "tid": 26180,
+      "elapsed_seconds": 2.516,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2f0adfae0",
+        "0x6644"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.417250+00:00",
+      "event": "thread_create",
+      "tid": 23924,
+      "elapsed_seconds": 2.516
+    },
+    {
+      "utc": "2026-10-17T21:49:09.418251+00:00",
+      "event": "exception",
+      "tid": 23924,
+      "elapsed_seconds": 2.516,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x2f1adf6b0",
+        "0x5d74"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.881250+00:00",
+      "event": "debug_string",
+      "tid": 16876,
+      "elapsed_seconds": 2.985,
+      "text": "onecore\\base\\appmodel\\staterepository\\winrt\\broker\\lib\\windows.internal.staterepository.packageresourceresolver.cpp(28)\\(null)!00007FFA3D2E6EFD: (caller: 00007FFA3D2E5103) ReturnHr(1) tid(41ec) 80070490 No se ha encontrado el elemento.\r\n"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.881750+00:00",
+      "event": "debug_string",
+      "tid": 16876,
+      "elapsed_seconds": 2.985,
+      "text": "onecore\\base\\appmodel\\staterepository\\winrt\\broker\\lib\\windows.internal.staterepository.packageresourceresolverfactory.cpp(34)\\(null)!00007FFA3D2E5153: (caller: 00007FFA43602915) ReturnHr(2) tid(41ec) 80070490 No se ha encontrado el elemento.\r\n"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.881750+00:00",
+      "event": "debug_string",
+      "tid": 16876,
+      "elapsed_seconds": 2.985,
+      "text": "onecore\\base\\appmodel\\runtime\\winrt\\lib\\windows.applicationmodel.package.cpp(1115)\\Windows.ApplicationModel.dll!00007FFA43602933: (caller: 00007FFA43604F96) ReturnHr(1) tid(41ec) 80070490 No se ha encontrado el elemento.\r\n"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.882250+00:00",
+      "event": "debug_string",
+      "tid": 16876,
+      "elapsed_seconds": 2.985,
+      "text": "onecore\\base\\appmodel\\runtime\\winrt\\lib\\windows.applicationmodel.package.cpp(1134)\\Windows.ApplicationModel.dll!00007FFA43604FD5: (caller: 00007FFA43601B70) ReturnHr(2) tid(41ec) 80070490 No se ha encontrado el elemento.\r\n"
+    },
+    {
+      "utc": "2026-10-17T21:49:09.883750+00:00",
+      "event": "dll_unload",
+      "tid": 16876,
+      "elapsed_seconds": 2.985,
+      "base": "0x7ffa5f4d0000"
+    },
+    {
+      "utc": "2026-10-17T21:49:10.238251+00:00",
+      "event": "thread_create",
+      "tid": 16832,
+      "elapsed_seconds": 3.344
+    },
+    {
+      "utc": "2026-10-17T21:49:10.238750+00:00",
+      "event": "exception",
+      "tid": 16832,
+      "elapsed_seconds": 3.344,
+      "code": "0x406d1388",
+      "first_chance": true,
+      "location": "0x7ffa64bb5369",
+      "parameters": [
+        "0x1000",
+        "0x3045bf780",
+        "0x41c0"
+      ],
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:10.240754+00:00",
+      "event": "thread_exit",
+      "tid": 16832,
+      "elapsed_seconds": 3.344,
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-17T21:49:10.588250+00:00",
+      "event": "thread_create",
+      "tid": 20440,
+      "elapsed_seconds": 3.688
+    },
+    {
+      "utc": "2026-10-17T21:49:10.589251+00:00",
+      "event": "thread_exit",
+      "tid": 20440,
+      "elapsed_seconds": 3.688,
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-17T21:49:16.054751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.157,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x8002627bc",
+      "parameters": [
+        "0x1",
+        "0x10cb54fc30"
+      ],
+      "access": "write",
+      "target": "0x10cb54fc30",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.088268+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.188,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x800262826",
+      "parameters": [
+        "0x1",
+        "0x10cb34fa18"
+      ],
+      "access": "write",
+      "target": "0x10cb34fa18",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.206251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.313,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.206752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.313,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.206752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.313,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.206752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.313,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.239251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.344,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.240251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.344,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.240251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.344,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.240752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.344,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.272750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.375,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.274251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.375,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.274251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.375,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.274751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.375,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.274751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.375,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.274751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.375,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.305751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.407,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.306750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.407,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.306750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.407,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.307252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.407,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.339250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.438,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.340251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.438,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.340251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.438,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.340750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.438,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.340750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.438,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.341250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.438,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.372250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.469,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.373751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.469,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.374252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.469,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.374750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.469,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.406251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.5,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.406753+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.516,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.407250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.516,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.407250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.516,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.407250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.516,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.407750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.516,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.438752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.547,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.439751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.547,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.439751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.547,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.440252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.547,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.472251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.579,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.472750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.579,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.472750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.579,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.473250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.579,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.473250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.579,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.473250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.579,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.505251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.61,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.506250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.61,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.506250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.61,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.506751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.61,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.539250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.641,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.539752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.641,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.540250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.641,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.540250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.641,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.540250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.641,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.540751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.641,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.572250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.672,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.573251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.672,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.573251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.672,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.574254+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.672,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.605251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.704,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.606250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.704,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.606250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.704,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.606750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.704,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.606750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.704,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.606750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.704,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.639250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.735,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.640268+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.735,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.640268+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.735,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.640751+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.735,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.672752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.782,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.673750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.782,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.673750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.782,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.674250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.782,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.674250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.782,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.674752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.782,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.705249+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.813,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.705750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.813,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.705750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.813,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.706250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.813,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.739253+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.844,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.739750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.844,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.740252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.844,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.740252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.844,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.740252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.844,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.740750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.844,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.772250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.875,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.773249+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.875,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.773249+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.875,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.774250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.875,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.805250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.907,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.806251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.907,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.806251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.907,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.806251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.907,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.806251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.907,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.806752+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.907,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.839251+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.938,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.840253+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.938,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44000"
+      ],
+      "access": "write",
+      "target": "0x10cbb44000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.840253+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.938,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3700"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3700",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.840753+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.938,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0d00"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0d00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.872252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.969,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb750000"
+      ],
+      "access": "write",
+      "target": "0x10cb750000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.873252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.969,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a000"
+      ],
+      "access": "write",
+      "target": "0x10cb94a000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.873252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.969,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbb44c00"
+      ],
+      "access": "write",
+      "target": "0x10cbb44c00",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.873252+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.969,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbbc3000"
+      ],
+      "access": "write",
+      "target": "0x10cbbc3000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.873750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.969,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbc42200"
+      ],
+      "access": "write",
+      "target": "0x10cbc42200",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.873750+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 9.969,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cbcc0000"
+      ],
+      "access": "write",
+      "target": "0x10cbcc0000",
+      "continue_status": "0x80010001"
+    },
+    {
+      "utc": "2026-10-17T21:49:16.905250+00:00",
+      "event": "exception",
+      "tid": 24376,
+      "elapsed_seconds": 10.0,
+      "code": "0xc0000005",
+      "first_chance": true,
+      "location": "0x7ffa64788b5e",
+      "parameters": [
+        "0x1",
+        "0x10cb94a600"
+      ],
+      "access": "write",
+      "target": "0x10cb94a600",
+      "continue_status": "0x80010001"
+    }
+  ],
+  "snapshots": []
+}

@@ -1,0 +1,30 @@
+{
+  "command": [
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\bin\\p3d_engine.exe",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\out\\p3d_test\\boot-linked.bin",
+    "--app0",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\CUSA12636",
+    "--user",
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\current-validation-20261018T002527Z\\user",
+    "--timeout",
+    "0"
+  ],
+  "executable_sha256": "d48705aa6b5a7dfe0da9f6f190b3a75e70b4b6094693f06ff87c5e14cee31d3b",
+  "environment": {
+    "GOW3_PAD_FILE": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\current-validation-20261018T002527Z\\pad.txt",
+    "GOW3_GPU_LOG": "info",
+    "GOW3_UPSCALER": "none",
+    "GOW3_GPU_USER_DIR": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\user",
+    "VK_LAYER_PATH": "C:/msys64/clang64/bin",
+    "GOW3_VK_VALIDATION": "1",
+    "GOW3_VK_VALIDATION_SYNC": "1"
+  },
+  "started_utc": "2026-10-18T00:25:28.063962+00:00",
+  "output": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\docs\\evidence\\crash-20261017\\current-validation-20261018T002527Z",
+  "pulses": 37,
+  "pid": 10608,
+  "observed_exit_code": null,
+  "deadline_reached": true,
+  "cleanup": "terminated only the owned regression process at the deadline",
+  "elapsed_seconds": 60.25
+}

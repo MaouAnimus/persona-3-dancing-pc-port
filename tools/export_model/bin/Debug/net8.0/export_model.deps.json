@@ -1,0 +1,273 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "export_model/1.0.0": {
+        "dependencies": {
+          "GFDLibrary": "0.10.3"
+        },
+        "runtime": {
+          "export_model.dll": {}
+        }
+      },
+      "BCnEncoder.Net/2.1.0": {
+        "dependencies": {
+          "Microsoft.Toolkit.HighPerformance": "7.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/BCnEncoder.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "BCnEncoder.Net.ImageSharp/1.1.1": {
+        "dependencies": {
+          "BCnEncoder.Net": "2.1.0",
+          "Microsoft.Toolkit.HighPerformance": "7.1.2",
+          "SixLabors.ImageSharp": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/BCnEncoder.NET.ImageSharp.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
+          }
+        }
+      },
+      "CSharpImageLibrary/4.2.0": {
+        "dependencies": {
+          "UsefulCSharpThings": "1.7.3"
+        },
+        "runtime": {
+          "lib/net462/CSharpImageLibrary.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "Microsoft.IO.RecyclableMemoryStream/1.2.2": {
+        "runtime": {
+          "lib/netstandard1.4/Microsoft.IO.RecyclableMemoryStream.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.0"
+          }
+        }
+      },
+      "Microsoft.Toolkit.HighPerformance/7.1.2": {
+        "runtime": {
+          "lib/net5.0/Microsoft.Toolkit.HighPerformance.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.2.1"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/2.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "System.Drawing.Common/8.0.2": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.224.6803"
+          }
+        }
+      },
+      "UsefulCSharpThings/1.7.3": {
+        "dependencies": {
+          "Microsoft.IO.RecyclableMemoryStream": "1.2.2"
+        },
+        "runtime": {
+          "lib/net462/UsefulThings.dll": {
+            "assemblyVersion": "1.7.3.0",
+            "fileVersion": "1.7.3.0"
+          }
+        }
+      },
+      "YamlDotNet/15.1.2": {
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.1.2.0"
+          }
+        }
+      },
+      "GFDLibrary/0.10.3": {
+        "dependencies": {
+          "BCnEncoder.Net": "2.1.0",
+          "BCnEncoder.Net.ImageSharp": "1.1.1",
+          "CSharpImageLibrary": "4.2.0",
+          "Scarlet": "1.0.0",
+          "Scarlet.IO.ImageFormats": "1.0.0",
+          "System.Drawing.Common": "8.0.2",
+          "TgaDecoderTest": "1.0.0",
+          "YamlDotNet": "15.1.2"
+        },
+        "runtime": {
+          "GFDLibrary.dll": {
+            "assemblyVersion": "0.10.3.0",
+            "fileVersion": "0.10.3.0"
+          }
+        }
+      },
+      "Scarlet/1.0.0": {
+        "dependencies": {
+          "System.Drawing.Common": "8.0.2"
+        },
+        "runtime": {
+          "Scarlet.dll": {
+            "assemblyVersion": "0.9.1.0",
+            "fileVersion": "0.9.1.0"
+          }
+        }
+      },
+      "Scarlet.IO.ImageFormats/1.0.0": {
+        "dependencies": {
+          "Scarlet": "1.0.0",
+          "System.Drawing.Common": "8.0.2"
+        },
+        "runtime": {
+          "Scarlet.IO.ImageFormats.dll": {
+            "assemblyVersion": "0.9.2.0",
+            "fileVersion": "0.9.2.0"
+          }
+        }
+      },
+      "TgaDecoderTest/1.0.0": {
+        "dependencies": {
+          "System.Drawing.Common": "8.0.2"
+        },
+        "runtime": {
+          "TgaDecoderTest.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "export_model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BCnEncoder.Net/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bBKYUDhpYenmp8vy5BVUHmS2LFym0NMga9V+S1eMJ+4zQLBwDw63Bs83AKOyqBKC2AqqgxXdTFA2a2V+SmGoIw==",
+      "path": "bcnencoder.net/2.1.0",
+      "hashPath": "bcnencoder.net.2.1.0.nupkg.sha512"
+    },
+    "BCnEncoder.Net.ImageSharp/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JL/woctP6UucxcLKUruMI+TIWTbSV7KO1RWY9/xMDuQqwo1BFXAIrShllMGHYIJ4B9bwGVGZNNbZUyM7rPLMTA==",
+      "path": "bcnencoder.net.imagesharp/1.1.1",
+      "hashPath": "bcnencoder.net.imagesharp.1.1.1.nupkg.sha512"
+    },
+    "CSharpImageLibrary/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L4qiCHNcKM0Ay3YHDFWRJPCQV6RvH5LZ8lOKamn/JxVqtM7KYJew2yOUB11P0iBGbgxIh7VQiKvTtSaVBUzhjA==",
+      "path": "csharpimagelibrary/4.2.0",
+      "hashPath": "csharpimagelibrary.4.2.0.nupkg.sha512"
+    },
+    "Microsoft.IO.RecyclableMemoryStream/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LA4RBTStohA0hAAs6oKchmIC5M5Mjd5MwfB7vbbl+312N5kXj8abTGOgwZy6ASJYLCiqiiK5kHS0hDGEgfkB8g==",
+      "path": "microsoft.io.recyclablememorystream/1.2.2",
+      "hashPath": "microsoft.io.recyclablememorystream.1.2.2.nupkg.sha512"
+    },
+    "Microsoft.Toolkit.HighPerformance/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cezzRky0BUJyYmSrcQUcX8qAv90JfUwCqWEbqfWZLHyeANo9/LWgW6y50pqbyc8r8SPXVsu2GNH98fB3VxrnvA==",
+      "path": "microsoft.toolkit.highperformance/7.1.2",
+      "hashPath": "microsoft.toolkit.highperformance.7.1.2.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
+      "path": "microsoft.win32.systemevents/8.0.0",
+      "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hZmADrZvn1q9tjPNuuvvl8F8vkz+LFEhnfBkuvwq6Bjgyj3BcOBk6ct4qfssrs25vWIITeH1HkIVdcCYWacpLw==",
+      "path": "sixlabors.imagesharp/2.0.0",
+      "hashPath": "sixlabors.imagesharp.2.0.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oDedGrYVyzvtGZhgtURpeneHq9D3HQtrvU7q6iCRa+BbIXvTZayGFo0iK3b7qHrwQ/OOAn9B0ghzQH6AbW5LHg==",
+      "path": "system.drawing.common/8.0.2",
+      "hashPath": "system.drawing.common.8.0.2.nupkg.sha512"
+    },
+    "UsefulCSharpThings/1.7.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-31rFxucp+Ni0LrucBbAdHxn03EqPC2Wup9MPNvvoJdMOtuqYrhpD7Sf2iwT2c0AMDJdudy1XMJo+CCAegJuKFQ==",
+      "path": "usefulcsharpthings/1.7.3",
+      "hashPath": "usefulcsharpthings.1.7.3.nupkg.sha512"
+    },
+    "YamlDotNet/15.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qeX0XhzOIcQEvnI5JxnPaIwcINwyY4Qy/LXhSfsdHkFrl9F41AT52UFfy2nIE7kgrhMg+cP7xuS+GtPJhmHmTA==",
+      "path": "yamldotnet/15.1.2",
+      "hashPath": "yamldotnet.15.1.2.nupkg.sha512"
+    },
+    "GFDLibrary/0.10.3": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Scarlet/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Scarlet.IO.ImageFormats/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TgaDecoderTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

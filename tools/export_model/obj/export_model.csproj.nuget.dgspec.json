@@ -1,0 +1,445 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\export_model\\export_model.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\export_model\\export_model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\export_model\\export_model.csproj",
+        "projectName": "export_model",
+        "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\export_model\\export_model.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\export_model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "framework": "net9.0",
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\GFDLibrary\\GFDLibrary.csproj": {
+                "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\GFDLibrary\\GFDLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet.IO.ImageFormats\\Scarlet.IO.ImageFormats.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet.IO.ImageFormats\\Scarlet.IO.ImageFormats.csproj",
+        "projectName": "Scarlet.IO.ImageFormats",
+        "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet.IO.ImageFormats\\Scarlet.IO.ImageFormats.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet.IO.ImageFormats\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "framework": "net9.0",
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\Scarlet.csproj": {
+                "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\Scarlet.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\Scarlet.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\Scarlet.csproj",
+        "projectName": "Scarlet",
+        "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\Scarlet.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "framework": "net9.0",
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\tga-decoder-cs\\TgaDecoderTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\tga-decoder-cs\\TgaDecoderTest.csproj",
+        "projectName": "TgaDecoderTest",
+        "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\tga-decoder-cs\\TgaDecoderTest.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\tga-decoder-cs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "framework": "net9.0",
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\GFDLibrary\\GFDLibrary.csproj": {
+      "version": "0.10.3",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\GFDLibrary\\GFDLibrary.csproj",
+        "projectName": "GFDLibrary",
+        "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\GFDLibrary\\GFDLibrary.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\GFDLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "framework": "net9.0",
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet.IO.ImageFormats\\Scarlet.IO.ImageFormats.csproj": {
+                "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet.IO.ImageFormats\\Scarlet.IO.ImageFormats.csproj"
+              },
+              "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\Scarlet.csproj": {
+                "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\Scarlet\\Scarlet\\Scarlet.csproj"
+              },
+              "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\tga-decoder-cs\\TgaDecoderTest.csproj": {
+                "projectPath": "C:\\Users\\Alvaro\\Downloads\\Persona 3 PC\\tools\\GFD-Studio\\Dependencies\\tga-decoder-cs\\TgaDecoderTest.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "BCnEncoder.Net": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "BCnEncoder.Net.ImageSharp": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "CSharpImageLibrary": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "YamlDotNet": {
+              "target": "Package",
+              "version": "[15.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.18, 9.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
