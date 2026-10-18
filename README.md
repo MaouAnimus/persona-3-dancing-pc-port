@@ -81,11 +81,8 @@ Ejecuta [`Jugar.bat`](Jugar.bat) o haz doble clic directamente en `p3d.exe`.
 
 ## 📚 Documentación Técnica y Arquitectura
 
-Para desarrolladores interesados en cómo se diseñó este port híbrido o en cómo portear otros títulos de PS4:
-- [Guía Maestra de Porting con IA y Prompts Clave](docs/GUIA_MAESTRA_PORTING_PROMPTS_ARQUITECTURA.md)
+Para detalles de las sesiones de ingeniería inversa, diagnósticos de estabilidad y soluciones aplicadas:
 - [Diario de Trabajo de Ingeniería Inversa (Worklog)](docs/worklog.md)
-- [Estructura del Proyecto](docs/ESTRUCTURA_PROYECTO.md)
-- [Informe Técnico de Estabilidad Vulkan](reporte_t_cnico_p3d_crash_vulkan.md)
 
 ---
 

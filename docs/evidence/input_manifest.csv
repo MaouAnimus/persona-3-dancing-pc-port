@@ -1,8 +1,0 @@
-File,Size_Bytes,Format,Role,SHA256,Title_ID,Notes
-CUSA12636/eboot.bin,9059281,Sony Orbis SELF (0x1D3D154F),Encapsulated PS4 Executable,2d73b19b6d2678df22db29fb59dd1ea6f095b388de96b91014bdb2c3334156bc,CUSA12636,Original signed executable from PS4 package
-CUSA12636/eboot.elf,9081617,ELF64 x86_64 FreeBSD/Orbis ABI (0xFE10),Decrypted PS4 ELF Executable,fb605d4fc3583ae6fd94eb07ee982871aa999f80ca7e45726d7f03e29c19a018,CUSA12636,Unselfed ELF targeting PS4 Orbis OS. Loaded in Ghidra project
-CUSA12636/sce_sys/param.sfo,2280,Sony SFO Parameters (0x101),Package Metadata,8a02a4438a347ce29106166983ae5295c60e38c2bb3258a337daf0dd1df22eae,CUSA12636,"UP2611-CUSA12636_00-PERSONA3DUS00000, App Ver 01.00, SDK 4.50"
-CUSA12636/data/data.cpk,1770195912,CRI Middleware CPK Archive,Game Resource Archive (Core),86061131ec3ec470a78663782f41136bfc0f066fc037409315b7a69f7507903d,CUSA12636,11204 files (GAP animations GMD models BIN scripts DDS textures)
-CUSA12636/data/ps4.cpk,7803978504,CRI Middleware CPK Archive,Game Resource Archive (PS4 High-Res & Audio),f5e7976d6ea2c64c81224ddb8a8d20f144331c90ec851d5c2ca3dd9e2ff7ff72,CUSA12636,3819 files (ACB/AWB audio BGM GMD stages DDS/GNF textures)
-PKG-Studio.exe,5926400,Windows PE32+ GUI Application,PKG Inspection / Repacking Tool,0359e36e503122a8808a14bb140e6b0fb639951ea7d942b7dc73c05d48896ac0,N/A,Tool present in root for PKG inspection
-[SPSX]-Persona.3.Dancing.in.Moonlight-CUSA12636-USA-Game-(5.05+)-PS4.pkg,9268297728,Sony PS4 Package Container,Source Package,c8bb602bd202b8e8e1731f6f1aee3342a4fb8988f7fc4d782d7d2d546b89b907,CUSA12636,Read-only base container

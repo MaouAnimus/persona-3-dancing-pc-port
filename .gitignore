@@ -51,14 +51,15 @@ game_stdout.log
 native_run.log
 test_*.log
 test_pad.txt
-docs/evidence/**/*.raw
-docs/evidence/**/*.events.jsonl
+docs/evidence/
 
-# --- 5. Datos de Usuario, Guardados y Caché del Shader/Python ---
+# --- 5. Datos de Usuario, Guardados y Caché del Shader/Python/.NET ---
 user/
 **/__pycache__/
 *.pyc
 *.pyo
+**/[Bb]in/
+**/[Oo]bj/
 
 # --- 6. Configuración de IDE y Entorno Local ---
 .vscode/*
