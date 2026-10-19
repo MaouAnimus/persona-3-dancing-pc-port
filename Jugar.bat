@@ -2,7 +2,8 @@
 title Persona 3: Dancing in Moonlight
 cd /d "%~dp0"
 set "PATH=C:\msys64\clang64\bin;%PATH%"
-rem === Optimizaciones de estabilidad Vulkan para Persona 3 Dancing ===
+rem === Configuración y Optimizaciones Vulkan para Persona 3 Dancing ===
+set "GOW3_CONFIG=%~dp0p3d.ini"
 set "GOW3_UPSCALER=none"
 set "GOW3_VK_RECORD_THREAD=0"
 set "GOW3_PRESENT_THREAD=0"

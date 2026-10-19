@@ -1,0 +1,18 @@
+Use case: ui-mockup, edit/compositing.
+Create one polished conceptual desktop game launcher interface, landscape 16:9, based on the supplied illustration as the edit target. This is a visual proposal for Persona 3: Dancing in Moonlight PC, NOT an RPG launcher and not an actual functional screenshot.
+Preserve the original anime art, identities, faces, clothing, poses, train interior, sea, clouds, seagulls and luminous blue atmosphere. The two seated characters must remain clearly visible in their original central positions. Keep the image artwork intact wherever possible; do not repaint faces. No additional characters.
+Overlay a professional readable Spanish launcher on the leftmost 33% only, with generous margins and a near-opaque deep midnight-navy gradient behind it fading into the image to its right. No UI covers either character's head or torso. Visual style: stylish Persona 3 inspired blue/cyan geometric diagonal accents, white narrow sans-serif type, precise aligned dropdowns, subtle fine borders, restrained music/equalizer motif, a small crescent motif, no excessive neon or generic sci-fi HUD. The background on the right remains bright and uncluttered. Full bleed interface, no monitor frame, no browser, no desk.
+At top-left title in white stacked type: "PERSONA 3" then smaller "DANCING IN MOONLIGHT", then small "PC LAUNCHER".
+Below, tabs "GRÁFICOS" (cyan active underline), "CONTROLES", "REGISTRO".
+A readable compact settings panel shows the following exact label/value pairs as aligned dropdown rows:
+"Resolución de salida" — "1920 × 1080"
+"Resolución interna" — "Nativa"
+"Modo de pantalla" — "Sin bordes"
+"Límite de FPS" — "60 FPS"
+"Reescalado" — "Desactivado"
+"Nitidez RCAS" — "Activada"
+"Filtro anisotrópico" — "8×"
+Then two small switches: "VSync" enabled, "Mostrar FPS" disabled.
+Small muted footnote "FPS superiores a 60: requieren validación".
+Bottom-left large bold cyan rectangular action button with one clipped diagonal corner, white play triangle and exact word "JUGAR". Secondary quiet action above or beside it "Guardar ajustes".
+Professional clean spacing; no invented system telemetry, news, ads or achievement cards. The resolution-interna row and the separated scaling/sharpening rows represent proposed interface improvements, not claims about implemented functionality. Do not add labels describing the proposal inside the image.

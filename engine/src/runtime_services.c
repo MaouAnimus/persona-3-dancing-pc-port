@@ -414,6 +414,14 @@ static ABI int32_t ime_result(uint32_t *result) {
 }
 static ABI int32_t ime_term(void) { memset(&ime,0,sizeof(ime)); return 0; }
 
+
+static ABI int32_t ime_panel_size(const void *p, uint32_t *w, uint32_t *h) {
+    (void)p;
+    if (w) *w = 1920;
+    if (h) *h = 1080;
+    return 0;
+}
+
 /* ---- Trophies: accepted locally, recorded in the log ---- */
 static ABI int32_t trophy_context(int32_t *ctx,int32_t user,uint32_t label,uint64_t options) {
     (void)user; (void)label; (void)options;
@@ -675,6 +683,7 @@ static const RuntimeExport exports[]={
     {"sceNpCommerceDialogInitialize",commerce_init}, {"sceNpCommerceDialogOpen",commerce_open},
     {"sceNpCommerceDialogUpdateStatus",commerce_status}, {"sceNpCommerceDialogTerminate",commerce_term},
     {"sceImeDialogInit",ime_init}, {"sceImeDialogGetStatus",ime_status}, {"sceImeDialogGetResult",ime_result},
+    {"sceImeDialogGetPanelSizeExtended",ime_panel_size},
     {"sceImeDialogTerm",ime_term}, {"sceImeDialogAbort",ime_term},
     {"sceNpTrophyCreateContext",trophy_context}, {"sceNpTrophyCreateHandle",trophy_handle},
     {"sceNpTrophyRegisterContext",trophy_register}, {"sceNpTrophyUnlockTrophy",trophy_unlock},
@@ -690,7 +699,7 @@ static const RuntimeExport exports[]={
     {"sceDiscMapIsRequestOnHDD",discmap_on_hdd}, {"sceDiscMap_8A828CAEE7EDD5E9",discmap_8a82},
     {"sceVoiceInit",ok_void}, {"sceVoiceEnd",ok_void},
     {"sceErrorDialogInitialize",error_dialog_init}, {"sceErrorDialogOpen",error_dialog_open},
-    {"sceErrorDialogUpdateStatus",error_dialog_status}, {"sceErrorDialogTerminate",error_dialog_term},
+    {"sceErrorDialogUpdateStatus",error_dialog_status}, {"sceErrorDialogGetStatus",error_dialog_status}, {"sceErrorDialogTerminate",error_dialog_term},
     {"sceSigninDialogInitialize",signin_dialog_init}, {"sceSigninDialogOpen",signin_dialog_open},
     {"sceSigninDialogClose",signin_dialog_close}, {"sceSigninDialogTerminate",signin_dialog_term},
     {"sceSigninDialogUpdateStatus",signin_dialog_status},

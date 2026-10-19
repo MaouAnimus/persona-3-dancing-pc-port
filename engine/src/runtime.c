@@ -184,7 +184,30 @@ static ABI __attribute__((noreturn)) void guest_libc_exit(int status) {
 }
 /* Imports are spelled NID#library by link_modules.py, the same for every game. libScePosix
  * exports libkernel's symbols with the same contracts, so both share the libkernel key. */
-static ABI int stub_libc_internal_ext(void *param) { (void)param; return 0; }
+static uint64_t libc_trace_buffer[128];
+static ABI int stub_heap_trace(void *param) {
+    if (param) {
+        uint64_t **ptrs = (uint64_t **)param;
+        ptrs[2] = &libc_trace_buffer[0];
+        ptrs[3] = &libc_trace_buffer[16];
+    }
+    return 0;
+}
+static ABI int stub_zero(void *param) { (void)param; return 0; }
+static ABI int stub_enoent(void *param) { (void)param; return 0x80020002; }
+static ABI int32_t posix_key_create(pthread_key_t *key, void (*dtor)(void*)) {
+    return pthread_key_create(key, dtor);
+}
+static ABI int32_t posix_key_delete(pthread_key_t key) {
+    return pthread_key_delete(key);
+}
+static ABI void *posix_getspecific(pthread_key_t key) {
+    return pthread_getspecific(key);
+}
+static ABI int32_t posix_setspecific(pthread_key_t key, const void *val) {
+    return pthread_setspecific(key, val);
+}
+
 
 static const char *canonical_name(const char *name, char out[128]) {
     const char *posix=strstr(name,"#libScePosix");
@@ -215,7 +238,7 @@ uintptr_t runtime_resolve(const char *name, int is_data) {
     if (!strcmp(name, "9rAeANT2tyE#libc")) return (uintptr_t)guard_release;
     if (!strcmp(name, "2emaaluWzUw#libc")) return (uintptr_t)guard_abort;
     if (!strcmp(name, "Ou3iL1abvng#libkernel")) return (uintptr_t)stack_fail;
-    if (!strcmp(name, "NWtTN10cJzE#libSceLibcInternalExt")) return (uintptr_t)stub_libc_internal_ext;
+    if (!strcmp(name, "NWtTN10cJzE#libSceLibcInternalExt")) return (uintptr_t)stub_heap_trace;
     if (!strcmp(name, "8zTFvBIAIN8#libc")) return (uintptr_t)guest_memset;
     if (!strcmp(name, "Q3VBxCXhUHs#libc")) return (uintptr_t)guest_memcpy;
     if (!strcmp(name, "+P6FRGH4LfA#libc")) return (uintptr_t)guest_memmove;
@@ -224,6 +247,24 @@ uintptr_t runtime_resolve(const char *name, int is_data) {
     if (!strcmp(name, "vNe1w4diLCs#libkernel")) return (uintptr_t)guest_tls_get_addr;
     if (!strcmp(name, "959qrazPIrg#libkernel")) return (uintptr_t)guest_procparam;
     if (!strcmp(name, "p5EcQeEeJAE#libkernel")) return (uintptr_t)guest_set_heap_api;
+    /* Unicorn Overlord & Libc initialization stubs */
+    if (!strcmp(name, "rNhWz+lvOMU#libkernel")) return (uintptr_t)stub_zero; /* _sceKernelSetThreadDtors */
+    if (!strcmp(name, "pB-yGZ2nQ9o#libkernel")) return (uintptr_t)stub_zero; /* _sceKernelSetThreadAtexitCount */
+    if (!strcmp(name, "WhCc1w3EhSI#libkernel")) return (uintptr_t)stub_zero; /* _sceKernelSetThreadAtexitReport */
+    if (!strcmp(name, "Tz4RNUCBbGI#libkernel")) return (uintptr_t)stub_zero; /* _sceKernelRtldThreadAtexitIncrement */
+    if (!strcmp(name, "8OnWXlgQlvo#libkernel")) return (uintptr_t)stub_zero; /* _sceKernelRtldThreadAtexitDecrement */
+    if (!strcmp(name, "py6L8jiVAN8#libkernel")) return (uintptr_t)stub_zero; /* sceKernelGetSanitizerMallocReplaceExternal */
+    if (!strcmp(name, "bnZxYgAFeA0#libkernel")) return (uintptr_t)stub_zero; /* sceKernelGetSanitizerNewReplaceExternal */
+    if (!strcmp(name, "fgIsQ10xYVA#libkernel")) return (uintptr_t)stub_zero; /* sceKernelChmod */
+    if (!strcmp(name, "0Cq8ipKr9n0#libkernel")) return (uintptr_t)stub_zero; /* sceKernelUtimes */
+    if (!strcmp(name, "j2AIqSqJP0w#libkernel")) return (uintptr_t)stub_zero; /* sceKernelGetdents */
+    if (!strcmp(name, "4fU5yvOkVG4#libSceSysmodule")) return (uintptr_t)stub_enoent; /* sceSysmoduleGetModuleInfoForUnwind */
+    if (!strcmp(name, "clVvL4ZDntw#libScePad")) return (uintptr_t)stub_zero; /* scePadSetMotionSensorState */
+                        if (!strcmp(name, "0-KXaS70xy4#libkernel")) return (uintptr_t)posix_getspecific;
+    if (!strcmp(name, "WrOLvHU0yQM#libkernel")) return (uintptr_t)posix_setspecific;
+    if (!strcmp(name, "mqULNdimTn0#libkernel")) return (uintptr_t)posix_key_create;
+    if (!strcmp(name, "6BpEZuDT7YI#libkernel")) return (uintptr_t)posix_key_delete;
+            if (!strcmp(name, "qBDmpCyGssE#libkernel")) return (uintptr_t)stub_zero; /* scePthreadCancel */
     uintptr_t mutex = runtime_mutex_resolve(name);
     if (mutex) return mutex;
     uintptr_t thread = runtime_thread_resolve(name);
@@ -260,6 +301,16 @@ uintptr_t runtime_resolve(const char *name, int is_data) {
     if (save) return save;
     uintptr_t file = runtime_file_resolve(name);
     if (file) return file;
+    /* Non-critical online / multimedia / platform service fallbacks */
+    if (strstr(name, "#libSceNp") ||
+        strstr(name, "#libSceHttp") ||
+        strstr(name, "#libSceJson2") ||
+        strstr(name, "#libSceGameLiveStreaming") ||
+        strstr(name, "#libSceCoredump") ||
+        strstr(name, "#libSceShareUtility") ||
+        strstr(name, "#libSceVideodec")) {
+        return (uintptr_t)stub_zero;
+    }
     return gow3gpu_resolve(name);
 }
 static const struct { const char *nid, *symbol; } import_names[]={

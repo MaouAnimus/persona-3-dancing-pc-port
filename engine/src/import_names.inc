@@ -921,4 +921,10 @@
     {"z-RMILqP6tE#libSceHmd","sceHmdTerminate"},
     {"z0KtN1vqF2E#libSceHmd","sceHmdReprojectionQueryGarlicBuffSize"},
     {"zk6c65xoyO0#libSceNpWebApi","sceNpWebApiCreateContextA"},
-
+    {"7uhBFWRAS60#libkernel","sceKernelClearEventFlag"},
+    {"9lvj5DjHZiA#libkernel","sceKernelPollEventFlag"},
+    {"65VH0Qaaz6s#libSceSaveData","sceSaveDataGetMountInfo"},
+    {"WAzWTZm1H+I#libSceSaveData","sceSaveDataTransferringMount"},
+    {"CWVW78Qc3fI#libSceMsgDialog","sceMsgDialogGetStatus"},
+    {"t2FvHRXzgqk#libSceErrorDialog","sceErrorDialogGetStatus"},
+    {"CRD+jSErEJQ#libSceImeDialog","sceImeDialogGetPanelSizeExtended"},

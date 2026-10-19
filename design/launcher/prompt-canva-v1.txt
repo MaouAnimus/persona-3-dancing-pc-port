@@ -1,0 +1,22 @@
+Diseña una maqueta de launcher de escritorio para “Persona 3: Dancing in Moonlight”, usando la imagen adjunta como fondo. Formato horizontal 16:9, lienzo de 1920 × 1080 px.
+
+Conserva a Aigis y Makoto, sus rostros, vestuario, poses y el interior del tren con el mar de fondo. Mantén el ambiente luminoso azul y turquesa. No coloques controles encima de sus caras ni cuerpos.
+
+En el tercio izquierdo coloca un panel azul medianoche casi opaco, con degradado hacia la ilustración. Estética inspirada en Persona 3: diagonales geométricas, acentos cian, blanco y azul eléctrico, tipografía sans serif legible y un pequeño motivo de ondas musicales. Diseño limpio, sin exceso de brillos.
+
+Arriba coloca “PERSONA 3”, debajo “DANCING IN MOONLIGHT” y una etiqueta pequeña “PC LAUNCHER”. Añade pestañas “GRÁFICOS”, “CONTROLES” y “REGISTRO”, con GRÁFICOS seleccionada.
+
+Organiza los ajustes en filas alineadas, con etiqueta a la izquierda y selector a la derecha:
+Resolución de salida: 1920 × 1080.
+Resolución interna: Nativa.
+Modo de pantalla: Sin bordes.
+Límite de FPS: 60 FPS.
+Reescalado: Desactivado.
+Nitidez RCAS: Activada.
+Filtro anisotrópico: 8×.
+Debajo, interruptores para “VSync” y “Mostrar FPS”.
+Incluye la nota discreta “FPS superiores a 60: requieren validación”.
+
+En la parte inferior coloca un botón principal cian “JUGAR” con símbolo de reproducción y un botón secundario “Guardar ajustes”. Prioriza el contraste, la lectura y el espacio entre elementos. Sin anuncios, noticias ni estadísticas inventadas.
+
+La resolución interna y la separación de reescalado/nitidez son propuestas de interfaz. No inventes métodos de antialiasing ni anuncies compatibilidad no comprobada. Entrega una propuesta visual de interfaz; sus botones se implementarán después en el launcher.

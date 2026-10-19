@@ -656,6 +656,18 @@ Frame* Presenter::PrepareFrame(const Libraries::VideoOut::BufferAttributeGroup& 
         fsr_settings.use_rcas &&
         Gow3Graphics::FsrPassRuns(fsr_settings.enable, true, int(image_size.width), int(image_size.height),
                                   int(frame->width), int(frame->height));
+    if (graphics.persona3_session) {
+        static int last_iw = 0, last_ih = 0, last_ow = 0, last_oh = 0, last_rcas = -1;
+        const int applied = Gow3Settings::Get().rcas_applied ? 1 : 0;
+        if (last_iw != int(image_size.width) || last_ih != int(image_size.height) ||
+            last_ow != int(frame->width) || last_oh != int(frame->height) || last_rcas != applied) {
+            std::printf("P3D image: internal=%ux%u, output=%ux%u, RCAS=%s\n",
+                        image_size.width, image_size.height, frame->width, frame->height,
+                        applied ? "applied" : "off (disabled or image/output sizes differ)");
+            last_iw = image_size.width; last_ih = image_size.height;
+            last_ow = frame->width; last_oh = frame->height; last_rcas = applied;
+        }
+    }
     image_view = fsr_pass.Render(cmdbuf, image_view, image_size, {frame->width, frame->height},
                                  fsr_settings, frame->is_hdr);
 

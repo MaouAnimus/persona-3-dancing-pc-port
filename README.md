@@ -74,8 +74,19 @@ persona-3-dancing-pc-port/
   ninja -C engine/out/gpu p3d
   ```
 
-### 4. Iniciar el Juego
-Ejecuta [`Jugar.bat`](Jugar.bat) o haz doble clic directamente en `p3d.exe`.
+### 4. Iniciar el Juego y Configuración
+Tienes varias formas cómodas de jugar:
+- **Launcher con Interfaz Gráfica (Recomendado):** Haz doble clic en [`p3d_launcher.exe`](p3d_launcher.exe) para abrir la interfaz y configurar los gráficos. Incluye las animaciones de los desplegables. Requiere Python con PySide6 instalado y disponible en PATH; conserva `p3d_launcher.py`, `p3d_launcher.pyw`, `p3d_settings.py` y la carpeta `design/launcher` junto al ejecutable.
+- **Jugar con los ajustes guardados:** Haz doble clic en [`Jugar.exe`](Jugar.exe) para iniciar directamente con la configuración de [`p3d.ini`](p3d.ini), sin abrir la interfaz ni usar archivos `.bat`. También puedes usar `p3d_launcher.exe --play`.
+- **Motor sin launcher:** `p3d.exe` y `bin/p3d_engine.exe` son los ejecutables del motor; para el uso habitual, utiliza uno de los dos accesos anteriores.
+
+Para reconstruir ambos accesos ejecutables, ejecuta `powershell -ExecutionPolicy Bypass -File tools/build_launchers.ps1`. El script utiliza MSYS2 CLANG64, enlaza sus bibliotecas de ejecución estáticamente y conserva los ejecutables anteriores en `out/launcher-backups/`.
+
+Los ajustes se guardan con **Guardar ajustes** o al pulsar **JUGAR**, y se aplican al siguiente inicio del juego. La resolución de salida modifica el tamaño de la ventana o el modo de pantalla completa; sin bordes usa el escritorio. El render interno sigue siendo nativo (1920×1080). RCAS solo se aplica si la salida coincide con ese tamaño. FSR 1/3 y las escalas internas que aún no tienen implementación para Persona están deshabilitados.
+
+El reloj original se mantiene a **60 Hz**: subirlo aceleraba la intro y el título. Los valores antiguos de 120/144/240 FPS vuelven a 60, incluso al iniciar desde los `.exe` sin abrir el formulario. El selector ofrece 60 FPS y un límite reducido de 30 FPS. Los FPS altos solo durante gameplay requieren una detección fiable de fase y separar la simulación del renderizado; esa función todavía no está implementada. La notificación del decodificador de vídeo no distingue título y gameplay. VSync puede reducir la tasa al refresco del modo de pantalla seleccionado.
+
+Verificación del launcher: `python tools/test_p3d_launcher_settings.py`. Pruebas de integración con el juego real: `python tools/audit_launcher_runtime.py` (abre varias ventanas de juego durante periodos acotados y utiliza configuraciones y partidas aisladas). Los registros y resultados quedan en `out/settings-audit/`.
 
 ---
 

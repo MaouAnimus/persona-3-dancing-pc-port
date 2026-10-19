@@ -407,6 +407,7 @@ static int direct_range_allocated(uint64_t phys, uint64_t size) {
 }
 
 static ABI uint64_t direct_size(void) { return POOL_SIZE; }
+static ABI uint64_t direct_available(void) { return POOL_SIZE > live_bytes ? POOL_SIZE - live_bytes : 0; }
 static ABI int32_t direct_allocate(int64_t low, int64_t high, uint64_t size,
                                   uint64_t alignment, int type, int64_t *out) {
     if (!alignment) alignment = PAGE;
@@ -649,9 +650,9 @@ static ABI int32_t batch_map(BatchEntry *entries, int count, int *processed) {
 }
 static const RuntimeExport exports[]={
     {"mmap",posix_mmap}, {"msync",posix_msync},
-    {"sceKernelGetDirectMemorySize",direct_size}, {"sceKernelAllocateDirectMemory",direct_allocate},
+    {"sceKernelGetDirectMemorySize",direct_size}, {"sceKernelAvailableDirectMemorySize",direct_available}, {"sceKernelAllocateDirectMemory",direct_allocate},
     {"sceKernelMapDirectMemory",direct_map}, {"sceKernelMapNamedDirectMemory",direct_map_named},
-    {"sceKernelReleaseDirectMemory",direct_release}, {"sceKernelMunmap",direct_unmap}, {"munmap",direct_unmap},
+    {"sceKernelReleaseDirectMemory",direct_release}, {"sceKernelCheckedReleaseDirectMemory",direct_release}, {"sceKernelMunmap",direct_unmap}, {"munmap",direct_unmap},
     {"sceKernelMapFlexibleMemory",map_flexible}, {"sceKernelMapNamedFlexibleMemory",map_flexible_named},
     {"sceKernelReleaseFlexibleMemory",release_flexible}, {"sceKernelReserveVirtualRange",reserve_range},
     {"sceKernelMprotect",kernel_mprotect}, {"sceKernelQueryMemoryProtection",query_protection},
@@ -661,9 +662,11 @@ static const RuntimeExport exports[]={
 uintptr_t runtime_memory_resolve(const char *name) {
     /* Direct-memory NIDs are exercised by test_runtime.c before names are loaded. */
     if (!strcmp(name, "pO96TwzOm5E#libkernel")) return (uintptr_t)direct_size;
+    if (!strcmp(name, "C0f7TJcbfac#libkernel")) return (uintptr_t)direct_available;
     if (!strcmp(name, "rTXw65xmLIA#libkernel")) return (uintptr_t)direct_allocate;
     if (!strcmp(name, "L-Q3LEjIbgA#libkernel")) return (uintptr_t)direct_map;
     if (!strcmp(name, "MBuItvba6z8#libkernel")) return (uintptr_t)direct_release;
+    if (!strcmp(name, "hwVSPCmp5tM#libkernel")) return (uintptr_t)direct_release;
     if (!strcmp(name, "cQke9UuBQOk#libkernel")) return (uintptr_t)direct_unmap;
     return RUNTIME_LOOKUP(exports,name);
 }

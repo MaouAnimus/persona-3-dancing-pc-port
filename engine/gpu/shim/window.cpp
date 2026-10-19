@@ -93,13 +93,33 @@ void WindowSDL::ApplyDisplayMode(int mode) {
     } else {
         const SDL_DisplayMode* desktop = SDL_GetDesktopDisplayMode(SDL_GetDisplayForWindow(window));
         const bool exclusive = mode == Gow3Graphics::Fullscreen && desktop;
-        if (!SDL_SetWindowFullscreenMode(window, exclusive ? desktop : nullptr)) {
+        SDL_DisplayMode selected{};
+        const SDL_DisplayMode* target = desktop;
+        if (exclusive && Gow3Settings::Get().persona3_session) {
+            const int output = Gow3Settings::Get().output_res;
+            const int w = Gow3Settings::OutputWidths[output], h = Gow3Settings::OutputHeights[output];
+            if (SDL_GetClosestFullscreenDisplayMode(SDL_GetDisplayForWindow(window), w, h,
+                                                    desktop->refresh_rate, false, &selected) &&
+                selected.w == w && selected.h == h) {
+                target = &selected;
+            } else {
+                std::printf("P3D display: requested fullscreen %dx%d unavailable; using desktop %dx%d\n",
+                            w, h, desktop->w, desktop->h);
+            }
+        }
+        if (!SDL_SetWindowFullscreenMode(window, exclusive ? target : nullptr)) {
             LOG_WARNING(Frontend, "Fullscreen mode: {}", SDL_GetError());
         }
         SDL_SetWindowFullscreen(window, true);
     }
+    SDL_ShowWindow(window);
     SDL_SyncWindow(window);
-    std::printf("Window: %s\n", Gow3Graphics::DisplayModeNames[mode]);
+    int pixel_w = 0, pixel_h = 0;
+    SDL_GetWindowSizeInPixels(window, &pixel_w, &pixel_h);
+    width = pixel_w;
+    height = pixel_h;
+    std::printf("Window: %s, HWND = %p, title = '%s'\n", Gow3Graphics::DisplayModeNames[mode], window_info.render_surface, base_title.c_str());
+    std::printf("Window output: %dx%d pixels\n", pixel_w, pixel_h);
 }
 
 WindowSDL::~WindowSDL() {

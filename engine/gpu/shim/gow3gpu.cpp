@@ -220,6 +220,9 @@ static void StartProfileWriter() {
 
 extern "C" int gow3gpu_init(const Gow3GpuConfig* config) {
     Gow3Settings::Load();
+    if (config->serial && std::strcmp(config->serial, "CUSA12636") == 0) {
+        Gow3Settings::ConfigurePersona3();
+    }
 #ifdef GOW3_PGO_GENERATE
     StartProfileWriter();
 #endif
@@ -231,7 +234,9 @@ extern "C" int gow3gpu_init(const Gow3GpuConfig* config) {
 #endif
     Core::Emulator::FillElfInfo(*config);
     const std::string title = config->title ? config->title : "Persona 3: Dancing in Moonlight";
-    const s32 width = config->width, height = config->height;
+    const auto& startup = Gow3Settings::Get();
+    const s32 width = startup.persona3_session ? Gow3Settings::OutputWidths[startup.output_res] : config->width;
+    const s32 height = startup.persona3_session ? Gow3Settings::OutputHeights[startup.output_res] : config->height;
     g_window_thread = std::thread([title, width, height] {
         Common::SetCurrentThreadName("p3d:window");
         auto* window = new Frontend::WindowSDL(width, height, title.c_str());

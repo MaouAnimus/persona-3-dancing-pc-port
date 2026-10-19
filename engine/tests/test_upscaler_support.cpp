@@ -7,12 +7,24 @@
 #include <unistd.h>
 #include "gow3_settings.h"
 
+#ifdef _WIN32
+#include <windows.h>
+static int setenv(const char* key, const char* value, int) { return _putenv_s(key, value); }
+static int unsetenv(const char* key) { return _putenv_s(key, ""); }
+#endif
+
 int main() {
     using namespace Gow3Settings;
+#ifdef _WIN32
+    char directory[MAX_PATH], path[MAX_PATH];
+    assert(GetTempPathA(MAX_PATH, directory));
+    assert(GetTempFileNameA(directory, "p3d", 0, path));
+#else
     char path[] = "/tmp/gow3-upscaler-test-XXXXXX";
     const int fd = mkstemp(path);
     assert(fd >= 0);
     close(fd);
+#endif
     setenv("GOW3_CONFIG", path, 1);
     unsetenv("GOW3_UPSCALER");
     unsetenv("GOW3_UPSCALE_PRESET");

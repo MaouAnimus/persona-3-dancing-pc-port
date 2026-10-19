@@ -20,6 +20,7 @@ static std::string Read(const char* path) {
 int main() {
     assert(G::ParseDisplayMode("borderless") == G::Borderless && G::ParseDisplayMode("bogus") == G::Windowed);
     assert(G::ParseFpsLimit(240) == 240 && G::ParseFpsLimit(75) == 0);
+    assert(G::ParseFpsLimit(144) == 144);
     assert(G::ParseResolution("1440p") == 3 && G::ParseResolution("8K") == 0);
     assert(G::ParseEngineFps(240) == 240 && G::ParseEngineFps(90) == 120);
     assert(G::ParseFramesQueued(2) == 2 && G::ParseFramesQueued(0) == 0 && G::ParseFramesQueued(5) == 1);
@@ -112,6 +113,27 @@ int main() {
     const std::string cheats = Read(path);
     assert(cheats.find("cheat_double_jumps=1\n") != std::string::npos);
     assert(cheats.find("cheat_very_hard=1\n") != std::string::npos);
+    {
+        std::ofstream out(path);
+        out << "output_res=3440x1440\nfps_limit=144\nrender_resolution=4K\n"
+               "upscaler=fsr3\nfsr1=1\nrcas=0\nengine_fps=240\n";
+    }
+    Gow3Settings::Load();
+    Gow3Settings::ConfigurePersona3();
+    assert(v.persona3_session && v.fps_limit == 60 && v.engine_fps == 60 && v.applied_engine_fps == 60);
+    assert(v.render_resolution == 0 && v.upscaler == Gow3Settings::UpscalerOff && !v.fsr1 && !v.rcas);
+    assert(Gow3Settings::OutputWidths[v.output_res] == 3440 && Gow3Settings::OutputHeights[v.output_res] == 1440);
+    assert(std::string(std::getenv("GOW3_FPS_LIMIT")) == "60");
+    assert(std::string(std::getenv("GOW3_VBLANK_HZ")) == "60");
+    for (const int requested : {0, 60, 120, 144, 240}) {
+        v.fps_limit = requested;
+        _putenv_s("GOW3_FPS_LIMIT", "240");
+        _putenv_s("GOW3_VBLANK_HZ", "240");
+        Gow3Settings::ConfigurePersona3();
+        assert(v.fps_limit == 60);
+        assert(std::string(std::getenv("GOW3_FPS_LIMIT")) == "60");
+        assert(std::string(std::getenv("GOW3_VBLANK_HZ")) == "60");
+    }
     std::remove(path);
     std::puts("PASS: graphics settings");
 }

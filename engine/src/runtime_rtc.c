@@ -152,4 +152,10 @@ static const RuntimeExport exports[]={
     {"sceRtcGetTickResolution",rtc_tick_resolution}, {"sceRtcSetTime_t",rtc_set_time_t},
     {"sceRtcGetTime_t",rtc_get_time_t}, {"sceRtcFormatRFC2822LocalTime",rtc_rfc2822_local},
 };
-uintptr_t runtime_rtc_resolve(const char *name) { return RUNTIME_LOOKUP(exports,name); }
+static ABI int32_t rtc_stub(void *arg) { (void)arg; return 0; }
+uintptr_t runtime_rtc_resolve(const char *name) {
+    if (!strcmp(name, "8lfvnRMqwEM#libSceRtc")) return (uintptr_t)rtc_current_clock;
+    if (!strcmp(name, "jfRO0uTjtzA#libSceRtc")) return (uintptr_t)rtc_stub;
+    if (!strcmp(name, "n5JiAJXsbcs#libSceRtc")) return (uintptr_t)rtc_stub;
+    return RUNTIME_LOOKUP(exports,name);
+}

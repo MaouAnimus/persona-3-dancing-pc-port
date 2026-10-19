@@ -152,6 +152,11 @@ uintptr_t runtime_rwlock_resolve(const char *name) {
     if (!strcmp(name,"+L98PIbGttk#libkernel")) return (uintptr_t)rw_unlock;
     if (!strcmp(name,"iPtZRWICjrM#libkernel")) return (uintptr_t)rw_timedread;
     if (!strcmp(name,"adh--6nIqTk#libkernel")) return (uintptr_t)rw_timedwrite;
+    if (!strcmp(name,"iGjsr1WAtI0#libkernel")) return (uintptr_t)rw_read;
+    if (!strcmp(name,"sIlRvQqsN2Y#libkernel")) return (uintptr_t)rw_write;
+    if (!strcmp(name,"EgmLo6EWgso#libkernel")) return (uintptr_t)rw_unlock;
+    if (!strcmp(name,"ytQULN-nhL4#libkernel")) return (uintptr_t)rw_init;
+    if (!strcmp(name,"1471ajPzxh0#libkernel")) return (uintptr_t)rw_destroy;
     return 0;
 }
 void runtime_rwlock_report(void) {

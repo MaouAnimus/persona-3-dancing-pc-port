@@ -10,6 +10,12 @@
 #include <string>
 #include <string_view>
 #include <vector>
+#ifdef _WIN32
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+#include <windows.h>
+#endif
 
 namespace Gow3Settings {
 
@@ -17,7 +23,32 @@ namespace {
 
 const char* Path() {
     const char* env = std::getenv("GOW3_CONFIG");
-    return env && env[0] ? env : "gow3.ini";
+    if (env && env[0]) return env;
+#ifdef _WIN32
+    // Bare p3d.exe/bin/p3d_engine.exe must read the same configuration as the
+    // launcher, even when invoked from another working directory.
+    static const std::string local = [] {
+        char executable[32768];
+        const DWORD length = GetModuleFileNameA(nullptr, executable, sizeof(executable));
+        if (length && length < sizeof(executable)) {
+            std::string folder(executable, length);
+            for (int level = 0; level < 2; ++level) {
+                const auto slash = folder.find_last_of("/\\");
+                if (slash == std::string::npos) break;
+                folder.resize(slash);
+                const std::string candidate = folder + "/p3d.ini";
+                if (FILE* file = std::fopen(candidate.c_str(), "r")) {
+                    std::fclose(file);
+                    return candidate;
+                }
+            }
+        }
+        return std::string("gow3.ini");
+    }();
+    return local.c_str();
+#else
+    return "gow3.ini";
+#endif
 }
 
 float Clamp(float v, float lo, float hi) {
@@ -211,6 +242,42 @@ void Load() {
     v.startup_deferred_readback = v.deferred_readback;
     v.startup_stale_readback = v.stale_readback;
     v.startup_anisotropy = v.anisotropy;
+}
+
+void ConfigurePersona3() {
+    auto& v = Get();
+    v.persona3_session = true;
+    v.upscaler = v.startup_upscaler = UpscalerOff;
+    v.object_motion = v.startup_object_motion = false;
+    v.live_resolution = v.startup_live_resolution = 0;
+    v.render_resolution = v.startup_render_resolution = 0;
+    v.engine_fps = v.startup_engine_fps = 60;
+    v.applied_engine_fps = 60;
+    v.fsr1 = false;
+    // VideoOut also clocks the guest intro/title. Without a guest timing patch,
+    // raising vblank accelerates playback instead of adding independent frames.
+    const int requested = v.fps_limit;
+    const int limit = requested == 30 ? 30 : 60;
+    v.fps_limit = limit;
+    const auto put = [](const char* key, const std::string& value) {
+#ifdef _WIN32
+        _putenv_s(key, value.c_str());
+#else
+        setenv(key, value.c_str(), 1);
+#endif
+    };
+    put("GOW3_FPS_LIMIT", std::to_string(limit));
+    put("GOW3_VBLANK_HZ", "60");
+    put("GOW3_ENGINE_FPS", "60");
+    std::printf("P3D settings: output=%dx%d, vsync=%d, fps_limit=%d, guest_timing=60 (unpatched), "
+                "render=native, upscaler=off, fsr1=0, rcas=%d, rcas_strength=%d, anisotropy=%d, "
+                "show_fps=%d, async_shaders=%d, frames_queued=%d\n",
+                OutputWidths[v.output_res], OutputHeights[v.output_res], int(v.vsync.load()), limit,
+                int(v.rcas.load()), v.rcas_strength.load(), v.anisotropy.load(), int(v.show_fps.load()),
+                int(v.async_shaders.load()), v.frames_queued.load());
+    if (requested > 60) {
+        std::printf("P3D: requested %d FPS capped at 60; original 60 Hz clock preserves intro/title speed\n", requested);
+    }
 }
 
 bool GraphicsNeedRestart() {

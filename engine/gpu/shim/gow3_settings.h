@@ -22,12 +22,13 @@ enum Preset : int { NativeAA = 0, Quality, Balanced, Performance, UltraPerforman
 enum DebugView : int { DebugNone = 0, DebugReactive = 1, DebugMotion = 2, DebugViewCount };
 
 /// Live output resolutions: the upscaler's output and the UI host targets.
-inline constexpr int OutputWidths[] = {1280, 1920, 2560, 3840};
-inline constexpr int OutputHeights[] = {720, 1080, 1440, 2160};
-inline constexpr int OutputCount = 4;
+inline constexpr int OutputWidths[] = {1280, 1920, 2560, 3840, 2560, 3440};
+inline constexpr int OutputHeights[] = {720, 1080, 1440, 2160, 1080, 1440};
+inline constexpr int OutputCount = 6;
 inline constexpr int OutputDefault = 1; ///< 1920x1080, the game's own size
 
 struct Values {
+    bool persona3_session = false;
     std::atomic<int> upscaler{UpscalerFsr3};
     std::atomic<int> preset{NativeAA};
     std::atomic<bool> sharpen{true};
@@ -117,6 +118,8 @@ Values& Get();
 
 /// Reads the file, then the environment overrides. Called once at start.
 void Load();
+/// Persona startup supports native targets; high FPS changes VideoOut only.
+void ConfigurePersona3();
 /// Checks the loaded choice before the first frame; unsupported FSR 4 uses FSR 3.1.
 void ConfigureUpscalerSupport(bool fsr4, bool fsr411);
 /// After device creation: DLSS availability; a DLSS setting falls back to FSR 3.1 without it.

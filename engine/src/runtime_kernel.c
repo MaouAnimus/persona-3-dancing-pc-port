@@ -474,6 +474,20 @@ static ABI int32_t kernel_wait_event_flag(uintptr_t id,uint64_t bit_pattern,uint
     return w.result;
 }
 
+
+static ABI int32_t kernel_clear_event_flag(uintptr_t id,uint64_t pattern) {
+    pthread_mutex_lock(&ef_lock);
+    KernelEventFlag *f=event_flag_find(id);
+    if (!f) { pthread_mutex_unlock(&ef_lock); return ERR(3); }
+    f->pattern&=pattern;
+    pthread_mutex_unlock(&ef_lock);
+    return 0;
+}
+static ABI int32_t kernel_poll_event_flag(uintptr_t id,uint64_t bit_pattern,uint32_t wait_mode,uint64_t *result_pattern) {
+    uint32_t timeout=0;
+    return kernel_wait_event_flag(id,bit_pattern,wait_mode,result_pattern,&timeout);
+}
+
 #include <semaphore.h>
 static ABI int32_t guest_posix_sem_init(sem_t *sem, int pshared, unsigned int value) {
     if (!sem) return -1;
@@ -538,6 +552,8 @@ static const RuntimeExport exports[]={
     {"sceKernelDeleteEventFlag",kernel_delete_event_flag},
     {"sceKernelSetEventFlag",kernel_set_event_flag},
     {"sceKernelWaitEventFlag",kernel_wait_event_flag},
+    {"sceKernelClearEventFlag",kernel_clear_event_flag},
+    {"sceKernelPollEventFlag",kernel_poll_event_flag},
     {"posix_sem_init",guest_posix_sem_init},
     {"posix_sem_destroy",guest_posix_sem_destroy},
     {"posix_sem_post",guest_posix_sem_post},

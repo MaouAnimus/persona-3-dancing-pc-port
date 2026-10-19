@@ -1,0 +1,412 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Persona 3: Dancing in Moonlight — Compact Launcher
+"""
+
+import os
+import subprocess
+import threading
+from pathlib import Path
+
+import tkinter as tk
+from tkinter import ttk, messagebox
+
+try:
+    from PIL import Image, ImageTk
+    HAS_PIL = True
+except ImportError:
+    HAS_PIL = False
+
+ROOT_DIR = Path(__file__).resolve().parent
+BIN_DIR = ROOT_DIR / "bin"
+ENGINE_EXE = BIN_DIR / "p3d_engine.exe"
+ROOT_P3D_EXE = ROOT_DIR / "p3d.exe"
+BOOT_BIN = ROOT_DIR / "out" / "p3d_test" / "boot-linked.bin"
+APP0_DIR = ROOT_DIR / "CUSA12636"
+CONFIG_FILE = ROOT_DIR / "p3d.ini"
+LOG_FILE = ROOT_DIR / "game_last_run.log"
+ICON_ICO = ROOT_DIR / "engine" / "launcher" / "p3d.ico"
+BANNER_PNG = APP0_DIR / "sce_sys" / "pic1.png"
+
+# Paleta Compacta Persona 3
+CLR_BG = "#0D1117"
+CLR_CARD = "#161B22"
+CLR_BORDER = "#30363D"
+CLR_ACCENT = "#1F6FEB"
+CLR_ACCENT_HOVER = "#388BFD"
+CLR_TEXT = "#C9D1D9"
+CLR_TEXT_MUTED = "#8B949E"
+CLR_GOLD = "#F2CC60"
+
+DEFAULT_CONFIG = {
+    "display_mode": "borderless",
+    "output_res": "1920x1080",
+    "render_resolution": "native",
+    "vsync": "1",
+    "fps_limit": "60",
+    "engine_fps": "60",
+    "upscaler": "off",
+    "fsr1": "0",
+    "rcas": "1",
+    "rcas_strength": "75",
+    "anisotropy": "8",
+    "show_fps": "0",
+    "async_shaders": "1",
+    "frames_queued": "1",
+    "anti_aliasing": "rcas",
+    "close_on_launch": "0",
+}
+
+
+def load_config() -> dict:
+    cfg = dict(DEFAULT_CONFIG)
+    if CONFIG_FILE.exists():
+        try:
+            for line in CONFIG_FILE.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    cfg[k.strip()] = v.strip()
+        except Exception:
+            pass
+
+    if "anti_aliasing" not in cfg or cfg["anti_aliasing"] not in ("off", "rcas", "fsr1", "fsr1_rcas", "fsr3"):
+        if cfg.get("upscaler") == "fsr3":
+            cfg["anti_aliasing"] = "fsr3"
+        elif cfg.get("fsr1") == "1" and cfg.get("rcas") == "1":
+            cfg["anti_aliasing"] = "fsr1_rcas"
+        elif cfg.get("fsr1") == "1":
+            cfg["anti_aliasing"] = "fsr1"
+        elif cfg.get("rcas") == "1":
+            cfg["anti_aliasing"] = "rcas"
+        else:
+            cfg["anti_aliasing"] = "off"
+    return cfg
+
+
+def save_config(cfg: dict) -> None:
+    aa = cfg.get("anti_aliasing", "rcas")
+    if aa == "rcas":
+        cfg["upscaler"] = "off"; cfg["fsr1"] = "0"; cfg["rcas"] = "1"
+    elif aa == "fsr1":
+        cfg["upscaler"] = "off"; cfg["fsr1"] = "1"; cfg["rcas"] = "0"
+    elif aa == "fsr1_rcas":
+        cfg["upscaler"] = "off"; cfg["fsr1"] = "1"; cfg["rcas"] = "1"
+    elif aa == "fsr3":
+        cfg["upscaler"] = "fsr3"; cfg["fsr1"] = "0"; cfg["rcas"] = "0"
+    else:
+        cfg["upscaler"] = "off"; cfg["fsr1"] = "0"; cfg["rcas"] = "0"
+
+    content = [
+        "# Persona 3 Dancing - p3d.ini",
+        f"display_mode={cfg.get('display_mode', 'borderless')}",
+        f"output_res={cfg.get('output_res', '1920x1080')}",
+        f"render_resolution={cfg.get('render_resolution', 'native')}",
+        f"vsync={cfg.get('vsync', '1')}",
+        f"fps_limit={cfg.get('fps_limit', '60')}",
+        f"engine_fps={cfg.get('engine_fps', '60')}",
+        f"frames_queued={cfg.get('frames_queued', '1')}",
+        f"async_shaders={cfg.get('async_shaders', '1')}",
+        f"upscaler={cfg.get('upscaler', 'off')}",
+        f"fsr1={cfg.get('fsr1', '0')}",
+        f"rcas={cfg.get('rcas', '1')}",
+        f"rcas_strength={cfg.get('rcas_strength', '75')}",
+        f"anisotropy={cfg.get('anisotropy', '8')}",
+        f"show_fps={cfg.get('show_fps', '0')}",
+        f"anti_aliasing={cfg.get('anti_aliasing', 'rcas')}",
+        f"close_on_launch={cfg.get('close_on_launch', '0')}",
+    ]
+    try:
+        CONFIG_FILE.write_text("\n".join(content) + "\n", encoding="utf-8")
+    except Exception:
+        pass
+
+
+class P3DLauncher(tk.Tk):
+    def __init__(self):
+        super().__init__()
+
+        self.title("Persona 3 Dancing")
+        self.geometry("520x460")
+        self.resizable(False, False)
+        self.configure(bg=CLR_BG)
+
+        if ICON_ICO.exists():
+            try:
+                self.iconbitmap(str(ICON_ICO))
+            except Exception:
+                pass
+
+        self.cfg = load_config()
+        self._setup_styles()
+        self._build_ui()
+
+    def _setup_styles(self):
+        self.style = ttk.Style(self)
+        self.style.theme_use("clam")
+
+        self.style.configure(".", background=CLR_BG, foreground=CLR_TEXT, font=("Segoe UI", 9))
+        self.style.configure("TFrame", background=CLR_BG)
+        self.style.configure("TNotebook", background=CLR_BG, borderwidth=0, tabmargins=[6, 4, 6, 0])
+        self.style.configure(
+            "TNotebook.Tab",
+            background=CLR_CARD,
+            foreground=CLR_TEXT_MUTED,
+            padding=[12, 5],
+            font=("Segoe UI", 9, "bold"),
+            borderwidth=0
+        )
+        self.style.map(
+            "TNotebook.Tab",
+            background=[("selected", CLR_ACCENT), ("active", CLR_ACCENT_HOVER)],
+            foreground=[("selected", "#FFFFFF"), ("active", "#FFFFFF")]
+        )
+        self.style.configure(
+            "TCombobox",
+            fieldbackground="#090D12",
+            background=CLR_CARD,
+            foreground=CLR_TEXT,
+            arrowcolor=CLR_TEXT,
+            padding=3
+        )
+        self.style.map("TCombobox", fieldbackground=[("readonly", "#090D12")], foreground=[("readonly", CLR_TEXT)])
+        self.style.configure("TCheckbutton", background=CLR_CARD, foreground=CLR_TEXT)
+        self.style.map("TCheckbutton", foreground=[("active", "#FFFFFF")], background=[("active", CLR_CARD)])
+
+    def _build_ui(self):
+        # Header Compacto (60px)
+        header = tk.Frame(self, bg=CLR_CARD, height=56, highlightthickness=1, highlightbackground=CLR_BORDER)
+        header.pack(fill="x", padx=10, pady=(8, 4))
+        header.pack_propagate(False)
+
+        title_lbl = tk.Label(header, text="PERSONA 3: DANCING IN MOONLIGHT", font=("Segoe UI", 11, "bold"), bg=CLR_CARD, fg="#FFFFFF")
+        title_lbl.pack(anchor="w", padx=14, pady=(8, 0))
+
+        sub_lbl = tk.Label(header, text="Configuración Gráfica y de Rendimiento", font=("Segoe UI", 8), bg=CLR_CARD, fg=CLR_TEXT_MUTED)
+        sub_lbl.pack(anchor="w", padx=14)
+
+        # Pestañas
+        self.nb = ttk.Notebook(self)
+        self.nb.pack(fill="both", expand=True, padx=10, pady=(2, 6))
+
+        self.tab_settings = ttk.Frame(self.nb)
+        self.tab_controls = ttk.Frame(self.nb)
+        self.tab_log = ttk.Frame(self.nb)
+
+        self.nb.add(self.tab_settings, text=" Ajustes ")
+        self.nb.add(self.tab_controls, text=" Controles ")
+        self.nb.add(self.tab_log, text=" Log ")
+
+        self._build_tab_settings()
+        self._build_tab_controls()
+        self._build_tab_log()
+        self._build_bottom()
+
+    def _build_tab_settings(self):
+        card = tk.Frame(self.tab_settings, bg=CLR_CARD, highlightthickness=1, highlightbackground=CLR_BORDER)
+        card.pack(fill="both", expand=True, padx=4, pady=4)
+
+        # Grid de Ajustes Compacto (2 columnas)
+        row = 0
+        tk.Label(card, text="Resolución:", bg=CLR_CARD, fg=CLR_TEXT, font=("Segoe UI", 9)).grid(row=row, column=0, sticky="w", padx=14, pady=6)
+        self.cb_res = ttk.Combobox(card, values=["1920x1080", "2560x1440", "3840x2160", "1280x720", "2560x1080", "3440x1440"], state="readonly", width=18)
+        self.cb_res.set(self.cfg.get("output_res", "1920x1080"))
+        self.cb_res.grid(row=row, column=1, sticky="w", padx=(0, 14), pady=6)
+
+        row += 1
+        tk.Label(card, text="Pantalla:", bg=CLR_CARD, fg=CLR_TEXT, font=("Segoe UI", 9)).grid(row=row, column=0, sticky="w", padx=14, pady=6)
+        self.cb_mode = ttk.Combobox(card, values=["Borderless", "Fullscreen", "Windowed"], state="readonly", width=18)
+        mode_map = {"borderless": "Borderless", "fullscreen": "Fullscreen", "windowed": "Windowed"}
+        self.cb_mode.set(mode_map.get(self.cfg.get("display_mode", "borderless"), "Borderless"))
+        self.cb_mode.grid(row=row, column=1, sticky="w", padx=(0, 14), pady=6)
+
+        row += 1
+        tk.Label(card, text="Límite FPS:", bg=CLR_CARD, fg=CLR_TEXT, font=("Segoe UI", 9)).grid(row=row, column=0, sticky="w", padx=14, pady=6)
+        self.cb_fps = ttk.Combobox(card, values=["60 FPS", "120 FPS", "144 FPS", "240 FPS", "Ilimitado", "30 FPS"], state="readonly", width=18)
+        fps_map = {"60": "60 FPS", "120": "120 FPS", "144": "144 FPS", "240": "240 FPS", "0": "Ilimitado", "30": "30 FPS"}
+        self.cb_fps.set(fps_map.get(self.cfg.get("fps_limit", "60"), "60 FPS"))
+        self.cb_fps.grid(row=row, column=1, sticky="w", padx=(0, 14), pady=6)
+
+        row += 1
+        tk.Label(card, text="Anti-Aliasing:", bg=CLR_CARD, fg=CLR_TEXT, font=("Segoe UI", 9)).grid(row=row, column=0, sticky="w", padx=14, pady=6)
+        self.cb_aa = ttk.Combobox(card, values=["RCAS (Nitidez)", "FSR 1.0 (Upscale)", "FSR 1.0 + RCAS", "Desactivado", "FSR 3.1"], state="readonly", width=18)
+        aa_map = {"rcas": "RCAS (Nitidez)", "fsr1": "FSR 1.0 (Upscale)", "fsr1_rcas": "FSR 1.0 + RCAS", "off": "Desactivado", "fsr3": "FSR 3.1"}
+        self.cb_aa.set(aa_map.get(self.cfg.get("anti_aliasing", "rcas"), "RCAS (Nitidez)"))
+        self.cb_aa.grid(row=row, column=1, sticky="w", padx=(0, 14), pady=6)
+
+        row += 1
+        tk.Label(card, text="Anisotropía:", bg=CLR_CARD, fg=CLR_TEXT, font=("Segoe UI", 9)).grid(row=row, column=0, sticky="w", padx=14, pady=6)
+        self.cb_af = ttk.Combobox(card, values=["8x (Recomendado)", "16x", "4x", "2x", "Off"], state="readonly", width=18)
+        af_map = {"8": "8x (Recomendado)", "16": "16x", "4": "4x", "2": "2x", "0": "Off"}
+        self.cb_af.set(af_map.get(self.cfg.get("anisotropy", "8"), "8x (Recomendado)"))
+        self.cb_af.grid(row=row, column=1, sticky="w", padx=(0, 14), pady=6)
+
+        row += 1
+        # Checkboxes
+        self.var_vsync = tk.StringVar(value=self.cfg.get("vsync", "1"))
+        chk_v = ttk.Checkbutton(card, text="VSync (Sincronización Vertical)", variable=self.var_vsync, onvalue="1", offvalue="0")
+        chk_v.grid(row=row, column=0, columnspan=2, sticky="w", padx=14, pady=(8, 2))
+
+        row += 1
+        self.var_fps_osd = tk.StringVar(value=self.cfg.get("show_fps", "0"))
+        chk_o = ttk.Checkbutton(card, text="Mostrar FPS en pantalla (Insert)", variable=self.var_fps_osd, onvalue="1", offvalue="0")
+        chk_o.grid(row=row, column=0, columnspan=2, sticky="w", padx=14, pady=2)
+
+        row += 1
+        self.var_close = tk.StringVar(value=self.cfg.get("close_on_launch", "0"))
+        chk_c = ttk.Checkbutton(card, text="Cerrar launcher al abrir el juego", variable=self.var_close, onvalue="1", offvalue="0")
+        chk_c.grid(row=row, column=0, columnspan=2, sticky="w", padx=14, pady=(2, 6))
+
+    def _build_tab_controls(self):
+        card = tk.Frame(self.tab_controls, bg=CLR_CARD, highlightthickness=1, highlightbackground=CLR_BORDER)
+        card.pack(fill="both", expand=True, padx=4, pady=4)
+
+        items = [
+            ("Notas Izq (Arriba/Izq/Abajo):", "W, A, S", "D-Pad"),
+            ("Notas Der (Arriba/Der/Abajo):", "I, L, K / Flechas", "△, ○, ✕ (Y, B, A)"),
+            ("Scratch / Fever:", "Espacio / Shift", "L1 / R1 / Sticks"),
+            ("Pausa:", "Esc / P", "Options / Start"),
+            ("Avanzar Diálogo:", "Enter / X / Flecha Abajo", "Cruz / A"),
+            ("Auto / Skip:", "I (Auto) / E (Skip)", "△ (Auto) / R1 (Skip)"),
+        ]
+
+        for lbl, kbd, pad in items:
+            f = tk.Frame(card, bg=CLR_CARD)
+            f.pack(fill="x", padx=12, pady=4)
+            tk.Label(f, text=lbl, font=("Segoe UI", 8, "bold"), width=28, anchor="w", bg=CLR_CARD, fg=CLR_TEXT).pack(side="left")
+            tk.Label(f, text=kbd, font=("Segoe UI", 8), width=18, anchor="w", bg=CLR_CARD, fg=CLR_GOLD).pack(side="left")
+            tk.Label(f, text=pad, font=("Segoe UI", 8), anchor="w", bg=CLR_CARD, fg=CLR_ACCENT_HOVER).pack(side="left")
+
+    def _build_tab_log(self):
+        card = tk.Frame(self.tab_log, bg=CLR_CARD, highlightthickness=1, highlightbackground=CLR_BORDER)
+        card.pack(fill="both", expand=True, padx=4, pady=4)
+
+        btn_bar = tk.Frame(card, bg=CLR_CARD)
+        btn_bar.pack(fill="x", padx=6, pady=4)
+        tk.Button(btn_bar, text="🔄 Recargar", bg="#21262D", fg=CLR_TEXT, relief="flat", font=("Segoe UI", 8), command=self._refresh_log).pack(side="left", padx=2)
+        tk.Button(btn_bar, text="📁 Carpeta Screenshots", bg="#21262D", fg=CLR_TEXT, relief="flat", font=("Segoe UI", 8), command=lambda: os.startfile(str(ROOT_DIR / "user" / "screenshots")) if (ROOT_DIR / "user" / "screenshots").exists() else None).pack(side="left", padx=2)
+
+        self.txt_log = tk.Text(card, bg="#090D12", fg="#8B949E", font=("Consolas", 8), wrap="none", relief="flat")
+        self.txt_log.pack(fill="both", expand=True, padx=6, pady=(0, 6))
+        self._refresh_log()
+
+    def _refresh_log(self):
+        self.txt_log.delete("1.0", "end")
+        if LOG_FILE.exists():
+            try:
+                lines = LOG_FILE.read_text(encoding="utf-8", errors="replace").splitlines()
+                self.txt_log.insert("end", "\n".join(lines[-200:]))
+                self.txt_log.see("end")
+            except Exception as e:
+                self.txt_log.insert("end", str(e))
+        else:
+            self.txt_log.insert("end", "Sin registros recientes (game_last_run.log).")
+
+    def _build_bottom(self):
+        bottom = tk.Frame(self, bg=CLR_BG)
+        bottom.pack(fill="x", padx=10, pady=(4, 10))
+
+        self.btn_play = tk.Button(
+            bottom,
+            text="▶   JUGAR",
+            font=("Segoe UI", 11, "bold"),
+            bg="#1F6FEB",
+            fg="#FFFFFF",
+            activebackground="#388BFD",
+            activeforeground="#FFFFFF",
+            relief="flat",
+            cursor="hand2",
+            padx=14,
+            pady=8,
+            command=self.launch_game
+        )
+        self.btn_play.pack(fill="x")
+
+    def _save_current_settings(self):
+        self.cfg["output_res"] = self.cb_res.get()
+        self.cfg["display_mode"] = self.cb_mode.get().lower()
+
+        fps_text = self.cb_fps.get()
+        fps_val = "60"
+        for k in ("120", "144", "240", "30"):
+            if k in fps_text: fps_val = k; break
+        if "Ilimitado" in fps_text: fps_val = "0"
+        self.cfg["fps_limit"] = fps_val
+
+        aa_text = self.cb_aa.get()
+        if "RCAS" in aa_text and "FSR 1.0 +" not in aa_text: self.cfg["anti_aliasing"] = "rcas"
+        elif "FSR 1.0 +" in aa_text: self.cfg["anti_aliasing"] = "fsr1_rcas"
+        elif "FSR 1.0" in aa_text: self.cfg["anti_aliasing"] = "fsr1"
+        elif "FSR 3.1" in aa_text: self.cfg["anti_aliasing"] = "fsr3"
+        else: self.cfg["anti_aliasing"] = "off"
+
+        af_text = self.cb_af.get()
+        af_val = "8"
+        for k in ("16", "4", "2"):
+            if k in af_text: af_val = k; break
+        if "Off" in af_text: af_val = "0"
+        self.cfg["anisotropy"] = af_val
+
+        self.cfg["vsync"] = self.var_vsync.get()
+        self.cfg["show_fps"] = self.var_fps_osd.get()
+        self.cfg["close_on_launch"] = self.var_close.get()
+
+        save_config(self.cfg)
+
+    def launch_game(self):
+        self._save_current_settings()
+
+        target_exe = ENGINE_EXE if ENGINE_EXE.exists() else ROOT_P3D_EXE
+        if not target_exe.exists():
+            messagebox.showerror("Error", f"No se encontró el ejecutable en:\n{ENGINE_EXE}")
+            return
+
+        cmd = [str(target_exe)]
+        if BOOT_BIN.exists(): cmd.append(str(BOOT_BIN))
+        if APP0_DIR.exists(): cmd.extend(["--app0", str(APP0_DIR)])
+
+        env = os.environ.copy()
+        env["GOW3_CONFIG"] = str(CONFIG_FILE.resolve())
+        env["GOW3_UPSCALER"] = self.cfg.get("upscaler", "off")
+        env["GOW3_VK_RECORD_THREAD"] = "0"
+        env["GOW3_PRESENT_THREAD"] = "0"
+        env["GOW3_DRAW_PIPE"] = "0"
+        env["GOW3_PREP_WORKERS"] = "0"
+        env["__GL_THREADED_OPTIMIZATIONS"] = "0"
+        env["DISABLE_LAYER_AMD_SWITCHABLE_GRAPHICS_1"] = "1"
+        env["VK_LOADER_DISABLE_INST_EXT_FILTER"] = "0"
+
+        clang64_bin = Path("C:/msys64/clang64/bin")
+        path_prefix = str(BIN_DIR.resolve())
+        if clang64_bin.exists():
+            path_prefix += os.pathsep + str(clang64_bin)
+        env["PATH"] = path_prefix + os.pathsep + env.get("PATH", "")
+
+        self.btn_play.config(state="disabled", text="EJECUTANDO...")
+
+        def _run():
+            try:
+                with open(LOG_FILE, "w", encoding="utf-8", errors="replace") as log_f:
+                    p = subprocess.Popen(cmd, cwd=str(ROOT_DIR), env=env, stdout=log_f, stderr=subprocess.STDOUT)
+
+                if self.cfg.get("close_on_launch") == "1":
+                    self.after(1500, self.destroy)
+                    return
+
+                p.wait()
+                self.after(0, lambda: self.btn_play.config(state="normal", text="▶   JUGAR"))
+            except Exception as e:
+                self.after(0, lambda: messagebox.showerror("Error", str(e)))
+                self.after(0, lambda: self.btn_play.config(state="normal", text="▶   JUGAR"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+
+def main():
+    app = P3DLauncher()
+    app.mainloop()
+
+
+if __name__ == "__main__":
+    main()

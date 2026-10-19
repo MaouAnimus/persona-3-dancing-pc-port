@@ -1,0 +1,13 @@
+Use case: ui-mockup / precise image edit.
+Edit the attached approved Persona 3 Dancing PC launcher mockup to show its CONTROLES tab. This is the SAME app window in another tab, not a redesign. Preserve the exact 16:9 composition, original character illustration pixel-for-pixel as closely as possible, faces, clothes, pose, train, sky, title, crescent, music motif, navy gradient panel, blue diagonals and bottom JUGAR and Guardar ajustes buttons in their existing positions and dimensions. Do not change the background. Edit only the tab active state and settings content area below the tabs and above the bottom buttons. All graphics settings and FPS footnote must disappear.
+Tabs remain exactly GRÁFICOS | CONTROLES | REGISTRO; CONTROLES is now bright cyan with the underline, other tabs muted.
+The content is a clean readable static controls guide, NOT key remapping. Spanish headings and concise parallel keyboard/gamepad mappings. Main heading "GUÍA DE CONTROLES", tiny subtitle "Teclado y mando". Fit entirely inside the existing left panel, without covering characters. Use a three-column compact table with small headers "ACCIÓN", "TECLADO", "MANDO". Each row can use two short lines to avoid crowded text. Keyboard labels as subtle outlined keycaps, gamepad values simple text. Thin blue separators. Cyan action section captions and white main text.
+Exact rows:
+"Notas izquierdas" | "W · A · S" | "D-Pad ↑ ← ↓"
+"Notas derechas" | "I · L · K / Flechas" | "△ ○ × / Y B A"
+"Scratch / Fever" | "Espacio / Shift" | "L1 / R1 / Sticks"
+"Pausa" | "Esc / P" | "Options / Start"
+"Avanzar diálogo" | "Enter / X / ↓" | "× / A"
+"Automático" | "I" | "△ / Y"
+"Saltar diálogo" | "E" | "R1"
+Below table a small muted note "Mando: PlayStation / Xbox". Avoid any invented binding editors, reset controls buttons, detected controller statuses, or new functionality. Keep exact high fidelity typography and styling continuity with the approved mockup. Make all seven rows legible and correctly aligned. No extra graphics settings.

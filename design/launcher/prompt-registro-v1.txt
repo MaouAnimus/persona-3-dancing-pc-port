@@ -1,0 +1,19 @@
+Use case: ui-mockup / precise image edit.
+Edit the attached approved Persona 3 Dancing PC launcher mockup to show its REGISTRO tab. This is the SAME app window in another tab, not a redesign. Preserve the exact 16:9 composition, original character illustration pixel-for-pixel as closely as possible, faces, clothes, pose, train, sky, title, crescent, music motif, navy gradient panel, blue diagonals and bottom JUGAR and Guardar ajustes buttons in their existing positions and dimensions. Do not change the background. Edit only the tab active state and settings content area below the tabs and above the bottom buttons. All graphics settings and FPS footnote must disappear.
+Tabs remain exactly GRÁFICOS | CONTROLES | REGISTRO; REGISTRO is now bright cyan with the underline, other tabs muted.
+Left content panel: cyan heading "REGISTRO DE ACTIVIDAD", small muted subtitle "Última ejecución". Below show two clean compact outlined buttons on the same row: reload icon plus "Recargar", folder outline icon plus "Abrir capturas". These correspond to existing launcher actions.
+Below is a large near-black navy rectangular scrolling log viewer filling the panel down to y=735 approximately in the same composition, fine blue border, small tasteful vertical scrollbar. It should look like a readable app text viewer, not a glowing hacker terminal. Monospaced white/blue-grey text; header cyan. File label above viewer "game_last_run.log".
+Show the following exact log excerpt, which is taken from an actual project run, without invented timestamps, success messages, errors or metrics:
+"Persona 3: Dancing in Moonlight"
+"Native PC Port"
+""
+"Window: Borderless"
+"GPU: using NVIDIA GeForce RTX 3050"
+"GPU: guest multisampling on"
+""
+"Runtime: audio ports opened=6,"
+"buffers output=25832"
+""
+"Runtime: save data mounts=2,"
+"memory writes=0"
+Put a small muted caption below viewer "Extracto de una ejecución de ejemplo". Make the text comfortably readable with generous line spacing, do not overfill. No telemetry cards, no hardware detection indicator, no new export/copy/delete buttons, no user file paths. Match approved mockup typography, panel width and layout strictly. Background bright cyan and characters untouched.
