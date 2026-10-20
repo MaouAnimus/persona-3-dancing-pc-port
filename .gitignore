@@ -23,6 +23,8 @@ bin/*.exe
 bin/*.dll
 bin/*.pdb
 *.exe
+!p3d_launcher.exe
+!Jugar.exe
 *.dll
 *.pdb
 *.obj
